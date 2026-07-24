@@ -1,0 +1,13 @@
+{
+  "name": "icd10-drug-search",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "npx serve dist"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0"
+  }
+}

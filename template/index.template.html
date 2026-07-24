@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="ICD-10 中国版药物和化学制剂表检索"
+  />
+  <title>ICD-10 药物和化学制剂表检索</title>
+
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --text: #1f2328;
+      --muted: #667085;
+      --border: #d9dee7;
+      --accent: #2563eb;
+      --chip: #eef4ff;
+      --chip-text: #1849a9;
+      --subtle: #f8fafc;
+      --danger: #b42318;
+      --shadow: 0 8px 30px rgba(16, 24, 40, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --panel: #171a21;
+        --text: #f2f4f7;
+        --muted: #98a2b3;
+        --border: #303541;
+        --accent: #78a9ff;
+        --chip: #1f2d49;
+        --chip-text: #b9d1ff;
+        --subtle: #11151c;
+        --danger: #ffb4ab;
+        --shadow: none;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .wrap {
+      width: min(980px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 48px 0 72px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(26px, 5vw, 40px);
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .search-shell {
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: color-mix(in srgb, var(--panel) 92%, transparent);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+
+    .search-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-input {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      padding: 15px 16px;
+      border-radius: 12px;
+      font-size: 17px;
+      background: transparent;
+      color: var(--text);
+    }
+
+    .search-input::placeholder {
+      color: var(--muted);
+    }
+
+    .clear-btn {
+      display: none;
+      flex: 0 0 auto;
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 13px;
+      background: var(--chip);
+      color: var(--chip-text);
+      cursor: pointer;
+    }
+
+    .clear-btn:hover {
+      filter: brightness(0.97);
+    }
+
+    .meta {
+      min-height: 24px;
+      padding: 14px 4px 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .results {
+      display: grid;
+      gap: 14px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .crumb {
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: var(--accent);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .crumb:hover {
+      text-decoration: underline;
+    }
+
+    .separator {
+      color: var(--muted);
+    }
+
+    .title-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .zh {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .page {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .en {
+      margin: 2px 0 13px;
+      color: var(--muted);
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+    }
+
+    .codes {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .code-cell {
+      min-width: 0;
+      padding: 9px 10px;
+      border-radius: 10px;
+      background: var(--chip);
+    }
+
+    .code-label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .code-value {
+      display: block;
+      color: var(--chip-text);
+      font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 14px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .children {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .children-title {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .child-list {
+      display: grid;
+      gap: 7px;
+    }
+
+    .child {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      border: 0;
+      padding: 9px 10px;
+      border-radius: 10px;
+      background: var(--subtle);
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .child:hover {
+      outline: 1px solid var(--border);
+    }
+
+    .child-name {
+      min-width: 0;
+    }
+
+    .child-zh {
+      font-weight: 600;
+    }
+
+    .child-en {
+      color: var(--muted);
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .child-code {
+      flex: 0 0 auto;
+      color: var(--chip-text);
+      font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    mark {
+      border-radius: 3px;
+      padding: 0 0.08em;
+      background: #ffe58f;
+      color: #111827;
+    }
+
+    .empty {
+      padding: 50px 18px;
+      text-align: center;
+      color: var(--muted);
+      border: 1px dashed var(--border);
+      border-radius: 16px;
+      background: var(--panel);
+    }
+
+    .fatal {
+      color: var(--danger);
+    }
+
+    @media (max-width: 720px) {
+      .wrap {
+        padding-top: 28px;
+      }
+
+      .codes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .code-cell:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header>
+      <h1>ICD-10 药物和化学制剂表</h1>
+      <div class="subtitle">
+        支持中文名、英文名及 T / X / Y 编码检索；命中子项时显示父级路径，命中父项时显示直接子项
+      </div>
+    </header>
+
+    <section class="search-shell">
+      <div class="search-row">
+        <input
+          id="q"
+          class="search-input"
+          type="search"
+          autocomplete="off"
+          autofocus
+          placeholder="输入药物名、化学制剂名或编码，例如：阿司匹林 / aspirin / T39.0"
+        />
+        <button id="clear" class="clear-btn" type="button">清空</button>
+      </div>
+    </section>
+
+    <div id="meta" class="meta">正在载入数据……</div>
+    <section id="results" class="results"></section>
+  </main>
+
+  <script>
+    const DATA = __ICD10_DATA__;
+
+    (() => {
+      "use strict";
+
+      const MAX_RESULTS = 200;
+
+      const queryInput = document.getElementById("q");
+      const clearButton = document.getElementById("clear");
+      const meta = document.getElementById("meta");
+      const results = document.getElementById("results");
+
+      function normalize(value) {
+        return String(value ?? "")
+          .toLowerCase()
+          .replace(/[，、；;]+/g, ",")
+          .replace(/\s+/g, " ")
+          .trim();
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? "").replace(
+          /[&<>"']/g,
+          (character) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#039;",
+            })[character],
+        );
+      }
+
+      function escapeRegex(value) {
+        return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      }
+
+      function highlight(value, terms) {
+        let output = escapeHtml(value);
+
+        for (const term of terms) {
+          if (!term) continue;
+
+          output = output.replace(
+            new RegExp(`(${escapeRegex(term)})`, "ig"),
+            "<mark>$1</mark>",
+          );
+        }
+
+        return output;
+      }
+
+      function buildSearchText(row) {
+        return normalize(
+          [
+            row.name_zh,
+            row.name_en,
+            row.poisoning_chapter19,
+            row.accidental,
+            row.intentional_self_harm,
+            row.undetermined_intent,
+            row.treatment_adverse_effect,
+            row.codes,
+          ].join(" "),
+        );
+      }
+
+      function prepareData() {
+        if (!Array.isArray(DATA)) {
+          throw new TypeError("DATA 必须是数组");
+        }
+
+        DATA.forEach((row, position) => {
+          row._position = position;
+          row._search = buildSearchText(row);
+
+          if (!Array.isArray(row.children)) {
+            row.children = [];
+          }
+        });
+      }
+
+      function getAncestors(position) {
+        const ancestors = [];
+        const visited = new Set();
+        let parent = DATA[position]?.parent;
+
+        while (
+          Number.isInteger(parent) &&
+          parent >= 0 &&
+          parent < DATA.length &&
+          !visited.has(parent)
+        ) {
+          visited.add(parent);
+          ancestors.unshift(parent);
+          parent = DATA[parent]?.parent;
+        }
+
+        return ancestors;
+      }
+
+      function recordMatches(row, terms) {
+        return terms.every((term) => row._search.includes(term));
+      }
+
+      function findMatches(terms) {
+        const visible = [];
+        let total = 0;
+
+        for (let position = 0; position < DATA.length; position += 1) {
+          const row = DATA[position];
+
+          if (!recordMatches(row, terms)) continue;
+
+          total += 1;
+
+          if (visible.length < MAX_RESULTS) {
+            visible.push(position);
+          }
+        }
+
+        return { visible, total };
+      }
+
+      function renderCodeCell(label, value, terms) {
+        return `
+          <div class="code-cell">
+            <span class="code-label">${label}</span>
+            <span class="code-value">
+              ${value ? highlight(value, terms) : "—"}
+            </span>
+          </div>
+        `;
+      }
+
+      function renderBreadcrumb(position) {
+        const ancestorPositions = getAncestors(position);
+
+        if (!ancestorPositions.length) return "";
+
+        return `
+          <div class="breadcrumb">
+            ${ancestorPositions
+              .map((ancestorPosition, index) => {
+                const ancestor = DATA[ancestorPosition];
+                const name =
+                  ancestor.name_zh ||
+                  ancestor.name_en ||
+                  `记录 ${ancestorPosition + 1}`;
+
+                const separator =
+                  index < ancestorPositions.length - 1
+                    ? '<span class="separator">›</span>'
+                    : "";
+
+                return `
+                  <button
+                    class="crumb"
+                    type="button"
+                    data-focus-position="${ancestorPosition}"
+                  >
+                    ${escapeHtml(name)}
+                  </button>
+                  ${separator}
+                `;
+              })
+              .join("")}
+          </div>
+        `;
+      }
+
+      function renderChildren(row) {
+        if (!row.children.length) return "";
+
+        return `
+          <div class="children">
+            <div class="children-title">
+              子项（${row.children.length}）
+            </div>
+
+            <div class="child-list">
+              ${row.children
+                .map((childPosition) => {
+                  const child = DATA[childPosition];
+
+                  if (!child) return "";
+
+                  const mainCode =
+                    child.poisoning_chapter19 || child.codes || "";
+
+                  return `
+                    <button
+                      class="child"
+                      type="button"
+                      data-focus-position="${childPosition}"
+                    >
+                      <span class="child-name">
+                        <span class="child-zh">
+                          ${escapeHtml(child.name_zh || "（无中文名）")}
+                        </span>
+                        <span class="child-en">
+                          ${escapeHtml(child.name_en || "")}
+                        </span>
+                      </span>
+
+                      <span class="child-code">
+                        ${escapeHtml(mainCode)}
+                      </span>
+                    </button>
+                  `;
+                })
+                .join("")}
+            </div>
+          </div>
+        `;
+      }
+
+      function renderCard(position, terms) {
+        const row = DATA[position];
+
+        return `
+          <article class="card">
+            ${renderBreadcrumb(position)}
+
+            <div class="title-row">
+              <div class="zh">
+                ${highlight(row.name_zh || "（无中文名）", terms)}
+              </div>
+              <div class="page">
+                ${row.page ? `第 ${escapeHtml(row.page)} 页` : ""}
+              </div>
+            </div>
+
+            <div class="en">
+              ${highlight(row.name_en || "", terms)}
+            </div>
+
+            <div class="codes">
+              ${renderCodeCell(
+                "中毒",
+                row.poisoning_chapter19,
+                terms,
+              )}
+              ${renderCodeCell("意外", row.accidental, terms)}
+              ${renderCodeCell(
+                "自害",
+                row.intentional_self_harm,
+                terms,
+              )}
+              ${renderCodeCell(
+                "意图不明",
+                row.undetermined_intent,
+                terms,
+              )}
+              ${renderCodeCell(
+                "不良反应",
+                row.treatment_adverse_effect,
+                terms,
+              )}
+            </div>
+
+            ${renderChildren(row)}
+          </article>
+        `;
+      }
+
+      function chooseFocusQuery(position) {
+        const row = DATA[position];
+
+        return (
+          row.name_zh ||
+          row.name_en ||
+          row.poisoning_chapter19 ||
+          row.codes ||
+          ""
+        );
+      }
+
+      function focusRecord(position) {
+        if (
+          !Number.isInteger(position) ||
+          position < 0 ||
+          position >= DATA.length
+        ) {
+          return;
+        }
+
+        queryInput.value = chooseFocusQuery(position);
+        render();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function render() {
+        const rawQuery = queryInput.value;
+        const normalizedQuery = normalize(rawQuery);
+        const terms = normalizedQuery.split(" ").filter(Boolean);
+
+        clearButton.style.display = rawQuery ? "inline-flex" : "none";
+
+        if (!terms.length) {
+          meta.textContent =
+            `共 ${DATA.length} 条记录；输入关键词开始检索`;
+          results.innerHTML = "";
+          return;
+        }
+
+        const { visible, total } = findMatches(terms);
+
+        meta.textContent =
+          total > MAX_RESULTS
+            ? `找到 ${total} 条，当前显示前 ${MAX_RESULTS} 条`
+            : `找到 ${total} 条`;
+
+        if (!visible.length) {
+          results.innerHTML =
+            '<div class="empty">未找到匹配记录</div>';
+          return;
+        }
+
+        results.innerHTML = visible
+          .map((position) => renderCard(position, terms))
+          .join("");
+      }
+
+      let inputTimer;
+
+      queryInput.addEventListener("input", () => {
+        window.clearTimeout(inputTimer);
+        inputTimer = window.setTimeout(render, 80);
+      });
+
+      clearButton.addEventListener("click", () => {
+        queryInput.value = "";
+        queryInput.focus();
+        render();
+      });
+
+      results.addEventListener("click", (event) => {
+        const target = event.target.closest("[data-focus-position]");
+
+        if (!target) return;
+
+        const position = Number(target.dataset.focusPosition);
+        focusRecord(position);
+      });
+
+      window.addEventListener("keydown", (event) => {
+        const isSearchShortcut =
+          (event.metaKey || event.ctrlKey) &&
+          event.key.toLowerCase() === "k";
+
+        if (!isSearchShortcut) return;
+
+        event.preventDefault();
+        queryInput.focus();
+        queryInput.select();
+      });
+
+      try {
+        prepareData();
+        render();
+      } catch (error) {
+        console.error(error);
+        meta.innerHTML =
+          '<span class="fatal">数据载入失败，请重新构建页面。</span>';
+      }
+    })();
+  </script>
+</body>
+</html>
