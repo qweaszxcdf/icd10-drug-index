@@ -5,9 +5,13 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "preview": "npx serve dist"
+    "preview": "npx serve dist",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name drug-index"
   },
   "dependencies": {
     "csv-parse": "^6.1.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.114.0"
   }
 }

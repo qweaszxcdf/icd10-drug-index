@@ -87,6 +87,17 @@ dist
 
 建议使用 Node.js 20 或更高版本。
 
+### 反馈功能
+
+反馈通过 Pages Function `/api/feedback` 写入 Cloudflare D1。首次部署前创建数据库并执行初始化：
+
+```bash
+npx wrangler d1 create icd10-drug-search-feedback
+npx wrangler d1 execute icd10-drug-search-feedback --remote --file=schema.sql
+```
+
+将创建命令输出的 `database_id` 写入 `wrangler.toml`，再执行 `npm run deploy`。
+
 ## CSV 必需字段
 
 ```text

@@ -320,6 +320,37 @@
       color: var(--danger);
     }
 
+    .feedback-dialog {
+      width: min(600px, calc(100% - 24px));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 0;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .feedback-dialog::backdrop { background: rgb(0 0 0 / 0.5); backdrop-filter: blur(3px); }
+    .feedback-dialog form { padding: 22px; }
+    .feedback-header { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+    .feedback-record-name { margin-top: 5px; color: var(--muted); font-size: 13px; }
+    .dialog-close { border: 0; background: transparent; color: var(--muted); font-size: 26px; cursor: pointer; }
+    .field { display: grid; gap: 7px; margin-bottom: 15px; }
+    .field span { font-size: 14px; font-weight: 600; }
+    .field input, .field select, .field textarea { width: 100%; border: 1px solid var(--border); border-radius: 10px; padding: 11px 12px; background: var(--subtle); color: var(--text); }
+    .field textarea { resize: vertical; }
+    .feedback-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+    .primary-btn, .secondary-btn { border-radius: 10px; padding: 10px 16px; cursor: pointer; }
+    .primary-btn { border: 0; background: var(--accent); color: white; }
+    .secondary-btn { border: 1px solid var(--border); background: transparent; color: var(--text); }
+    .feedback-status { min-height: 22px; color: var(--muted); font-size: 14px; }
+    .primary-btn:disabled { cursor: wait; opacity: 0.65; }
+
+    .card-actions { display: flex; justify-content: flex-end; margin-top: 14px; }
+    .card-feedback {
+      border: 1px solid var(--border); border-radius: 9px; padding: 7px 11px;
+      background: transparent; color: var(--accent); cursor: pointer; font-size: 13px;
+    }
+    .card-feedback:hover { background: var(--chip); }
+
     @media (max-width: 720px) {
       .wrap {
         padding-top: 28px;
@@ -332,6 +363,7 @@
       .code-cell:first-child {
         grid-column: 1 / -1;
       }
+
     }
   </style>
 </head>
@@ -361,7 +393,30 @@
 
     <div id="meta" class="meta">正在载入数据……</div>
     <section id="results" class="results"></section>
+
   </main>
+
+  <dialog id="feedback-dialog" class="feedback-dialog">
+    <form id="feedback-form">
+      <div class="feedback-header">
+        <div><strong>提交数据反馈</strong><div id="feedback-record-name" class="feedback-record-name"></div></div>
+        <button id="feedback-close" class="dialog-close" type="button" aria-label="关闭">×</button>
+      </div>
+      <label class="field"><span>问题类型</span>
+        <select id="feedback-type" required>
+          <option value="">请选择</option><option>中文名称错误</option><option>英文名称错误</option>
+          <option>中毒编码错误</option><option>意外编码错误</option><option>故意自害编码错误</option>
+          <option>意图不明编码错误</option><option>不良反应编码错误</option>
+          <option>层级错误</option><option>缺少词条</option><option>其他</option>
+        </select>
+      </label>
+      <label class="field"><span>建议修改为</span><input id="feedback-proposed-value" maxlength="500" placeholder="可选，例如：X85" /></label>
+      <label class="field"><span>问题说明</span><textarea id="feedback-message" maxlength="2000" rows="6" required placeholder="请说明依据、原表位置或建议修改内容"></textarea></label>
+      <label class="field"><span>联系方式</span><input id="feedback-contact" maxlength="200" placeholder="可选，邮箱或其他联系方式" /></label>
+      <div id="feedback-status" class="feedback-status" role="status"></div>
+      <div class="feedback-actions"><button id="feedback-cancel" type="button" class="secondary-btn">取消</button><button id="feedback-submit" type="submit" class="primary-btn">提交反馈</button></div>
+    </form>
+  </dialog>
 
   <script>
     const DATA = __ICD10_DATA__;
@@ -375,6 +430,16 @@
       const clearButton = document.getElementById("clear");
       const meta = document.getElementById("meta");
       const results = document.getElementById("results");
+      const feedbackDialog = document.getElementById("feedback-dialog");
+      const feedbackForm = document.getElementById("feedback-form");
+      const feedbackRecordName = document.getElementById("feedback-record-name");
+      const feedbackType = document.getElementById("feedback-type");
+      const feedbackProposedValue = document.getElementById("feedback-proposed-value");
+      const feedbackMessage = document.getElementById("feedback-message");
+      const feedbackContact = document.getElementById("feedback-contact");
+      const feedbackSubmit = document.getElementById("feedback-submit");
+      const feedbackStatus = document.getElementById("feedback-status");
+      let feedbackPosition = null;
 
       function normalize(value) {
         return String(value ?? "")
@@ -627,6 +692,11 @@
             </div>
 
             ${renderChildren(row)}
+            <div class="card-actions">
+              <button class="card-feedback" type="button" data-feedback-position="${position}">
+                反馈此词条
+              </button>
+            </div>
           </article>
         `;
       }
@@ -655,6 +725,22 @@
         queryInput.value = chooseFocusQuery(position);
         render();
         window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function openFeedback(position) {
+        const row = DATA[position];
+        if (!row) return;
+        feedbackPosition = position;
+        feedbackRecordName.textContent = [
+          `记录 ${row.index}`, row.name_zh, row.name_en,
+          row.poisoning_chapter19,
+        ].filter(Boolean).join(" / ");
+        feedbackType.value = "";
+        feedbackProposedValue.value = "";
+        feedbackMessage.value = "";
+        feedbackContact.value = "";
+        feedbackStatus.textContent = "";
+        feedbackDialog.showModal();
       }
 
       function render() {
@@ -703,6 +789,12 @@
       });
 
       results.addEventListener("click", (event) => {
+        const feedbackTargetButton = event.target.closest("[data-feedback-position]");
+        if (feedbackTargetButton) {
+          openFeedback(Number(feedbackTargetButton.dataset.feedbackPosition));
+          return;
+        }
+
         const target = event.target.closest("[data-focus-position]");
 
         if (!target) return;
@@ -710,6 +802,9 @@
         const position = Number(target.dataset.focusPosition);
         focusRecord(position);
       });
+
+      document.getElementById("feedback-close").addEventListener("click", () => feedbackDialog.close());
+      document.getElementById("feedback-cancel").addEventListener("click", () => feedbackDialog.close());
 
       window.addEventListener("keydown", (event) => {
         const isSearchShortcut =
@@ -721,6 +816,46 @@
         event.preventDefault();
         queryInput.focus();
         queryInput.select();
+      });
+
+      feedbackForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const row = DATA[feedbackPosition];
+        if (!row) return;
+        feedbackSubmit.disabled = true;
+        feedbackSubmit.textContent = "正在提交……";
+        feedbackStatus.textContent = "正在提交……";
+        try {
+          const response = await fetch("/api/feedback", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({
+              feedbackType: feedbackType.value,
+              proposedValue: feedbackProposedValue.value,
+              message: feedbackMessage.value,
+              contact: feedbackContact.value,
+              url: window.location.href,
+              record: {
+                index: row.index, page: row.page, level: row.level,
+                name_zh: row.name_zh, name_en: row.name_en,
+                poisoning_chapter19: row.poisoning_chapter19,
+                accidental: row.accidental,
+                intentional_self_harm: row.intentional_self_harm,
+                undetermined_intent: row.undetermined_intent,
+                treatment_adverse_effect: row.treatment_adverse_effect,
+              },
+            }),
+          });
+          const result = await response.json();
+          if (!response.ok || !result.ok) throw new Error(result.error || "提交失败");
+          feedbackStatus.textContent = `反馈已提交${result.id ? `，编号 ${result.id}` : ""}`;
+          window.setTimeout(() => feedbackDialog.close(), 1000);
+        } catch (error) {
+          feedbackStatus.textContent = error.message || "提交失败，请稍后重试。";
+        } finally {
+          feedbackSubmit.disabled = false;
+          feedbackSubmit.textContent = "提交反馈";
+        }
       });
 
       try {

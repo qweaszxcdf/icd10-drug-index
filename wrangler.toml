@@ -1,0 +1,8 @@
+name = "icd10-drug-search"
+compatibility_date = "2026-07-25"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "icd10-drug-search-feedback"
+database_id = "9ddfac41-622d-4494-a84f-02300b1a7a5f"
