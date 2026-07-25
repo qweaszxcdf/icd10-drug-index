@@ -3,6 +3,7 @@ const ALLOWED_TYPES = new Set([
   "故意自害编码错误", "意图不明编码错误",
   "不良反应编码错误", "层级错误", "缺少词条", "其他",
 ]);
+const PROJECT_KEY = "icd10-drug-index";
 
 function json(data, status = 200) {
   return Response.json(data, {
@@ -13,12 +14,6 @@ function json(data, status = 200) {
 
 function text(value, maxLength) {
   return String(value ?? "").trim().slice(0, maxLength);
-}
-
-function nullableInteger(value) {
-  if (value === "" || value === null || value === undefined) return null;
-  const number = Number(value);
-  return Number.isInteger(number) ? number : null;
 }
 
 export async function onRequestPost(context) {
@@ -41,24 +36,27 @@ export async function onRequestPost(context) {
   if (message.length < 5) return json({ ok: false, error: "反馈说明至少需要填写 5 个字符" }, 400);
 
   const record = body.record ?? {};
+  const requestAsn = Number(context.request.cf?.asn);
+  const asn = Number.isInteger(requestAsn) && requestAsn >= 0 ? requestAsn : null;
+  let recordData;
+  try {
+    recordData = JSON.stringify(record);
+  } catch {
+    return json({ ok: false, error: "词条数据格式无效" }, 400);
+  }
+  if (recordData.length > 12000) return json({ ok: false, error: "词条数据过大" }, 413);
+
   try {
     const result = await env.DB.prepare(`
       INSERT INTO feedback (
-        record_index, page, level, name_zh, name_en, poisoning_code,
-        accidental_code, self_harm_code, undetermined_code,
-        adverse_effect_code, feedback_type, proposed_value, message, contact,
-        url, user_agent, type, query
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        project_key, record_data, feedback_type, proposed_value, message,
+        contact, url, user_agent, as_name, ip_address
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `).bind(
-      nullableInteger(record.index), nullableInteger(record.page), nullableInteger(record.level),
-      text(record.name_zh, 500), text(record.name_en, 500),
-      text(record.poisoning_chapter19, 100), text(record.accidental, 100),
-      text(record.intentional_self_harm, 100),
-      text(record.undetermined_intent, 100), text(record.treatment_adverse_effect, 100),
-      feedbackType, proposedValue, message, contact, text(body.url, 1000),
-      text(request.headers.get("user-agent"), 500),
-      feedbackType,
-      text([record.name_zh, record.name_en, record.poisoning_chapter19].filter(Boolean).join(" / "), 200),
+      PROJECT_KEY, recordData, feedbackType, proposedValue, message, contact,
+      text(body.url, 1000), text(request.headers.get("user-agent"), 500),
+      text(request.cf?.asOrganization, 200),
+      text(request.headers.get("CF-Connecting-IP"), 64),
     ).run();
     return json({ ok: true, id: result.meta?.last_row_id ?? null, message: "反馈已提交" }, 201);
   } catch (error) {

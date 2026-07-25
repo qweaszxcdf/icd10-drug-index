@@ -344,7 +344,7 @@
     .feedback-status { min-height: 22px; color: var(--muted); font-size: 14px; }
     .primary-btn:disabled { cursor: wait; opacity: 0.65; }
 
-    .card-actions { display: flex; justify-content: flex-end; margin-top: 14px; }
+    .card-actions { display: inline; margin-left: 8px; }
     .card-feedback {
       border: 1px solid var(--border); border-radius: 9px; padding: 7px 11px;
       background: transparent; color: var(--accent); cursor: pointer; font-size: 13px;
@@ -440,6 +440,7 @@
       const feedbackSubmit = document.getElementById("feedback-submit");
       const feedbackStatus = document.getElementById("feedback-status");
       let feedbackPosition = null;
+      let focusedPosition = null;
 
       function normalize(value) {
         return String(value ?? "")
@@ -480,6 +481,57 @@
         }
 
         return output;
+      }
+
+      function renderSeeLinks(value, terms, currentPosition) {
+        const source = String(value ?? "");
+        if (!source) return "";
+
+        const candidates = DATA
+          .map((row, position) => ({
+            position,
+            names: [row.name_zh, row.name_en]
+              .map((name) => String(name ?? "").trim())
+              .filter(Boolean),
+          }))
+          .filter(({ position }) => position !== currentPosition)
+          .flatMap(({ position, names }) =>
+            names.map((name) => ({ position, name })),
+          )
+          .sort((left, right) => right.name.length - left.name.length);
+
+        const matches = [];
+        for (const candidate of candidates) {
+          let fromIndex = 0;
+          while (fromIndex < source.length) {
+            const index = source.toLocaleLowerCase().indexOf(
+              candidate.name.toLocaleLowerCase(),
+              fromIndex,
+            );
+            if (index < 0) break;
+
+            const prefix = source.slice(Math.max(0, index - 50), index);
+            if (/(?:see(?:\s+also)?|另见|参见|见)[\s:：,，、;；()（）-]*$/i.test(prefix)) {
+              const end = index + candidate.name.length;
+              if (!matches.some((match) => index < match.end && end > match.start)) {
+                matches.push({ start: index, end, position: candidate.position });
+              }
+            }
+            fromIndex = index + candidate.name.length;
+          }
+        }
+
+        matches.sort((left, right) => left.start - right.start);
+        if (!matches.length) return highlight(source, terms);
+
+        let output = "";
+        let cursor = 0;
+        for (const match of matches) {
+          output += highlight(source.slice(cursor, match.start), terms);
+          output += `<button class="crumb see-link" type="button" data-focus-position="${match.position}">${highlight(source.slice(match.start, match.end), terms)}</button>`;
+          cursor = match.end;
+        }
+        return output + highlight(source.slice(cursor), terms);
       }
 
       function buildSearchText(row) {
@@ -656,15 +708,16 @@
 
             <div class="title-row">
               <div class="zh">
-                ${highlight(row.name_zh || "（无中文名）", terms)}
+                ${renderSeeLinks(row.name_zh || "（无中文名）", terms, position)}
               </div>
               <div class="page">
                 ${row.page ? `第 ${escapeHtml(row.page)} 页` : ""}
               </div>
+              <button class="card-feedback" type="button" data-feedback-position="${position}">Report</button>
             </div>
 
             <div class="en">
-              ${highlight(row.name_en || "", terms)}
+              ${renderSeeLinks(row.name_en || "", terms, position)}
             </div>
 
             <div class="codes">
@@ -692,11 +745,6 @@
             </div>
 
             ${renderChildren(row)}
-            <div class="card-actions">
-              <button class="card-feedback" type="button" data-feedback-position="${position}">
-                反馈此词条
-              </button>
-            </div>
           </article>
         `;
       }
@@ -722,6 +770,7 @@
           return;
         }
 
+        focusedPosition = position;
         queryInput.value = chooseFocusQuery(position);
         render();
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -749,6 +798,17 @@
         const terms = normalizedQuery.split(" ").filter(Boolean);
 
         clearButton.style.display = rawQuery ? "inline-flex" : "none";
+
+        if (focusedPosition !== null) {
+          const row = DATA[focusedPosition];
+          if (!row) {
+            focusedPosition = null;
+          } else {
+            meta.textContent = "已精准定位到 1 条记录";
+            results.innerHTML = renderCard(focusedPosition, []);
+            return;
+          }
+        }
 
         if (!terms.length) {
           meta.textContent =
@@ -778,11 +838,13 @@
       let inputTimer;
 
       queryInput.addEventListener("input", () => {
+        focusedPosition = null;
         window.clearTimeout(inputTimer);
         inputTimer = window.setTimeout(render, 80);
       });
 
       clearButton.addEventListener("click", () => {
+        focusedPosition = null;
         queryInput.value = "";
         queryInput.focus();
         render();

@@ -23,7 +23,7 @@ function toNumber(value, fallback = 0) {
 
 function normalizeRows(rows) {
   return rows.map((row, position) => ({
-    index: toNumber(row.index, position),
+    index: position,
     page: toNumber(row.page, 0),
     level: Math.max(0, toNumber(row.level, 0)),
     name_zh: row.name_zh || "",
