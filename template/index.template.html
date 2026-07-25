@@ -487,12 +487,32 @@
         const source = String(value ?? "");
         if (!source) return "";
 
+        function referenceNames(name) {
+          const normalizedName = String(name ?? "").trim();
+          if (!normalizedName) return [];
+
+          const names = [normalizedName];
+          const shortName = normalizedName.match(/^(.+?)(?=\s*[（(])/u)?.[1]?.trim();
+          if (shortName && shortName !== normalizedName) names.push(shortName);
+
+          for (const part of normalizedName.split(/[,，]/u)) {
+            const alternateName = part.trim();
+            if (alternateName && alternateName !== normalizedName) {
+              names.push(alternateName);
+            }
+          }
+
+          const compactName = normalizedName.replace(/[（）()]/gu, "");
+          if (compactName && compactName !== normalizedName) names.push(compactName);
+
+          return [...new Set(names)];
+        }
+
         const candidates = DATA
           .map((row, position) => ({
             position,
             names: [row.name_zh, row.name_en]
-              .map((name) => String(name ?? "").trim())
-              .filter(Boolean),
+              .flatMap((name) => referenceNames(name)),
           }))
           .filter(({ position }) => position !== currentPosition)
           .flatMap(({ position, names }) =>
@@ -511,7 +531,9 @@
             if (index < 0) break;
 
             const prefix = source.slice(Math.max(0, index - 50), index);
-            if (/(?:see(?:\s+also)?|另见|参见|见)[\s:：,，、;；()（）-]*$/i.test(prefix)) {
+            const isReferenceStart = /(?:see(?:\s+also)?|另见|参见|见)[\s:：,，、;；()（）-]*$/i.test(prefix);
+            const isReferenceListItem = /(?:see(?:\s+also)?|另见|参见|见)[^。！？]{0,50}[,，、;；]\s*$/i.test(prefix);
+            if (isReferenceStart || isReferenceListItem) {
               const end = index + candidate.name.length;
               if (!matches.some((match) => index < match.end && end > match.start)) {
                 matches.push({ start: index, end, position: candidate.position });
@@ -522,6 +544,20 @@
         }
 
         matches.sort((left, right) => left.start - right.start);
+        const mergedMatches = [];
+        for (const match of matches) {
+          const previous = mergedMatches.at(-1);
+          if (
+            previous &&
+            /^[\s:：,，、;；]+$/u.test(source.slice(previous.end, match.start))
+          ) {
+            previous.end = match.end;
+            previous.position = match.position;
+          } else {
+            mergedMatches.push({ ...match });
+          }
+        }
+        matches.splice(0, matches.length, ...mergedMatches);
         if (!matches.length) return highlight(source, terms);
 
         let output = "";
@@ -840,7 +876,7 @@
       queryInput.addEventListener("input", () => {
         focusedPosition = null;
         window.clearTimeout(inputTimer);
-        inputTimer = window.setTimeout(render, 80);
+        inputTimer = window.setTimeout(render, 350);
       });
 
       clearButton.addEventListener("click", () => {
