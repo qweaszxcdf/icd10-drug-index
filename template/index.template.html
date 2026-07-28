@@ -387,6 +387,7 @@
           autofocus
           placeholder="输入药物名、化学制剂名或编码，例如：阿司匹林 / aspirin / T39.0"
         />
+        <button id="search" class="primary-btn" type="button">检索</button>
         <button id="clear" class="clear-btn" type="button">清空</button>
       </div>
     </section>
@@ -427,6 +428,7 @@
       const MAX_RESULTS = 200;
 
       const queryInput = document.getElementById("q");
+      const searchButton = document.getElementById("search");
       const clearButton = document.getElementById("clear");
       const meta = document.getElementById("meta");
       const results = document.getElementById("results");
@@ -871,12 +873,16 @@
           .join("");
       }
 
-      let inputTimer;
-
-      queryInput.addEventListener("input", () => {
+      function submitSearch() {
         focusedPosition = null;
-        window.clearTimeout(inputTimer);
-        inputTimer = window.setTimeout(render, 350);
+        render();
+      }
+
+      searchButton.addEventListener("click", submitSearch);
+      queryInput.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter") return;
+        event.preventDefault();
+        submitSearch();
       });
 
       clearButton.addEventListener("click", () => {
