@@ -7,7 +7,7 @@
 1573,0,2-脱氧-5-氟尿苷,2-Deoxy-5-fluorouridine,T45.1,X44.-,X64.-,Y14.-,Y43.1
 1573,0,2-氧基乙醇,2-Ethoxyethanol,T52.3,X46.-,X66.-,Y16.-,
 1573,0,"2,3-丁基-4-羟基茴香醚",BHA,T50.9,X44.-,X64.-,Y14.-,Y57.4
-1573,0,"2,3,7,8-四氯化二苯-对二噁英","2,3,7,8-Tetrachlorodibenzo-",T53.7,X46.-,X66.-,Y16.-,
+1573,0,"2,3,7,8-四氯化二苯-对二噁英","2,3,7,8-Tetrachlorodibenzo-p-dioxin",T53.7,X46.-,X66.-,Y16.-,
 1573,0,"2,4-二氯苯氧乙酸","2,4-Dichlorophenoxyacetic",T60.3,X48.-,X68.-,Y18.-,
 1573,0,"2,4,5-三氯苯氧乙酸","2,4,5-T",T60.3,X48.-,X68.-,Y18.-,
 1573,0,3-甲基苯乙妥因 - 现译名,Phenantoin,T42.0,X41.-,X61.-,Y11.-,Y46.2
@@ -110,8 +110,8 @@
 1575,0,阿司米星[阿司霉素](抗生素),Astromicin,T36.5,X44.-,X64.-,Y14.-,Y40.5
 1575,0,阿司匹林[乙酰水杨酸](铝),Aspirin (aluminum) (soluble),T39.0,X40.-,X60.-,Y10.-,Y45.1
 1575,1,肠衣,enteric coated,T39.0,X40.-,X60.-,Y10.-,Y45.1
-1576,0,阿司匹林钙 - 现译名,Calcium Acetylsalicylate,T39.0,X40.-,X60.-,Y10.-,Y45.1
-1576,0,阿糖胞苷[胞嘧啶阿拉伯糖苷] (抗病毒药，抗肿瘤药),"Ara-C, Cytarabine, Cytosine arabinoside",T45.1,X44.-,X64.-,Y14.-,
+1576,0,阿司匹林钙 - 现译名,Calcium acetylsalicylate,T39.0,X40.-,X60.-,Y10.-,Y45.1
+1576,0,阿糖胞苷[胞嘧啶阿拉伯糖苷] (抗病毒药，抗肿瘤药),"Ara-C, Cytarabine, Cytosine arabinoside",T45.1,X44.-,X64.-,Y14.-,Y43.1
 1576,0,阿糖脑苷酶[阿尔葡西酶],Alglucerase,T45.3,X44.-,X64.-,Y14.-,Y43.6
 1576,0,阿糖腺苷(抗病毒药),"Adenine arabinoside, Ara-A",T37.5,X44.-,X64.-,Y14.-,Y41.5
 1576,0,阿替卡因(局部麻醉药),Articaine,T41.3,X44.-,X64.-,Y14.-,Y48.3
@@ -168,7 +168,7 @@
 1577,0,安非拉酮[二乙胺苯丙酮],"Diethylpropion, Amfepramone",T50.5,X44.-,X64.-,Y14.-,Y57.0
 1577,0,安非他明NEC-现译名苯丙胺,Amphetamine,T43.6,X41.-,X61.-,Y11.-,Y49.7
 1577,0,安非他尼(精神兴奋药),Amfetaminil,T43.6,X41.-,X61.-,Y11.-,Y49.7
-1577,0,安非他酮[丁氨苯丙酮] (抗抑郁药),"Amfethamine, Bupropion",T43.2,X41.-,X61.-,Y11.-,
+1577,0,安非他酮[丁氨苯丙酮] (抗抑郁药),"Amfethamine, Bupropion",T43.2,X41.-,X61.-,Y11.-,Y49.2
 1577,0,安氟醚-现译名 恩氟烷,Enflurane,T41.0,X44.-,X64.-,Y14.-,Y48.0
 1577,0,安福霉素[双霉素](抗生素),Amfomycin,T36.8,X44.-,X64.-,Y14.-,Y40.8
 1577,0,安宫黄体酮(长效)-现译名,Medroxyprogesterone,T38.5,X44.-,X64.-,Y14.-,Y42.5
@@ -178,8 +178,7 @@
 1577,0,安咪奈丁[阿米庚酸](抗抑郁药),Amineptine,T43.0,X41.-,X61.-,Y11.-,Y49.0
 1577,0,安眠药，丸剂,"Sleeping draught, pill",T42.7,X41.-,X61.-,Y11.-,Y47.9
 1577,0,安那度-现译名阿法罗定,Alphaprodine,T40.4,X42.-,X62.-,Y12.-,Y45.0
-1577,0,安乃近[去甲氨基比林],Metamizole sodium,T39.2,X40.-,X60.-,Y10.-,Y45.8
-1577,0,安乃近[去甲氨基比林] (解热镇痛药),"Methampyrone, Sulpyrine, Noramidopyrine Analgin, Dipyrone",,,,,
+1577,0,安乃近[去甲氨基比林] (解热镇痛药),"Metamizole sodium, Methampyrone, Sulpyrine, Noramidopyrine Analgin, Dipyrone",T39.2,X40.-,X60.-,Y10.-,Y45.8
 1577,1,甲磺酸盐,methanesulfonate sodium,T39.2,X40.-,X60.-,Y10.-,Y45.8
 1577,0,安哌齐特(抗精神病药),Amperozide,T43.5,X41.-,X61.-,Y11.-,Y49.5
 1577,0,安普乐定(氢氯化物)(眼科用药),Apraclonidine (hydrochloride),T44.4,X43.-,X63.-,Y13.-,Y51.4
@@ -189,7 +188,7 @@
 1577,0,"安他唑林(抗心律失常, 抗组胺药)",Antazolin(e),T45.0,X44.-,X64.-,Y14.-,Y43.0
 1577,0,安体舒通-现译名螺内酯,Spironolactone,T50.0,X44.-,X64.-,Y14.-,Y54.1
 1578,0,(解热镇痛药),Fenazone,T39.2,X40.-,X60.-,Y10.-,Y45.8
-1578,0,安妥(α-萘硫脲),ANTU (alpha,T60.4,X48.-,X68.-,Y18.-,
+1578,0,安妥(α-萘硫脲),ANTU (alpha naphthylthiourea),T60.4,X48.-,X68.-,Y18.-,
 1578,0,安妥明 - 现译名 氯贝丁酯,Clofibrate,T46.6,X44.-,X64.-,Y14.-,Y52.6
 1578,0,安西奈德 - 现译名 安西缩松,Amcinonide,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1578,0,安西缩松[安西奈德],Amcinonide,T49.0,X44.-,X64.-,Y14.-,Y56.0
@@ -221,7 +220,7 @@
 1578,0,氨磺丁脲[依凡诺](降血糖药),Carbutamide,T38.3,X44.-,X64.-,Y14.-,Y42.3
 1578,0,氨基苯酚,Aminophenol,T54.0,X49.-,X69.-,Y19.-,
 1578,0,氨基苯甲酸乙酯-现译名,Benzocaine,T41.3,X44.-,X64.-,Y14.-,Y48.3
-1578,0,氨基比林[匹拉米酮],"Amidopyrine, Aminofena-",T39.2,X40.-,X60.-,Y10.-,Y45.8
+1578,0,氨基比林[匹拉米酮],Amidopyrine,T39.2,X40.-,X60.-,Y10.-,Y45.8
 1578,0,氨基比林异丙酯,Isopropylaminophenazone,T39.2,X40.-,X60.-,Y10.-,Y45.8
 1578,0,氨基己酸(止血药),Aminocaproic acid,T45.6,X44.-,X64.-,Y14.-,Y44.3
 1578,0,氨基甲酸酯(杀虫药),Carbamate (insecticide),T60.0,X48.-,X68.-,Y18.-,
@@ -359,7 +358,7 @@
 1582,0,贝美格(中枢兴奋药),Bemegride,T50.7,X44.-,X64.-,Y14.-,Y50.0
 1582,0,贝那利秦(抗震颤麻痹药),Benaprizine,T44.3,X43.-,X63.-,Y13.-,Y51.3
 1582,0,贝那普利[苯那普利](降压药),Benazepril,T46.4,X44.-,X64.-,Y14.-,Y52.4
-1582,0,贝那替索[苯乃静][胃复康] (抗胆碱药),Benactyline,T44.3,X43.-,X63.-,Y13.-,Y51.3
+1582,0,贝那替索[苯乃静][胃复康] (抗胆碱药),Benactyzine,T44.3,X43.-,X63.-,Y13.-,Y51.3
 1582,0,贝奈克酯(抗肿瘤药),Benexate,T47.1,X44.-,X64.-,Y14.-,Y53.1
 1582,0,贝诺酯[扑炎痛](抗炎镇痛药),Benorilate,T39.0,X40.-,X60.-,Y10.-,Y45.1
 1582,0,贝齐米特(镇痛药),Bezitramide,T40.4,X42.-,X62.-,Y12.-,Y45.0
@@ -450,7 +449,7 @@
 1584,0,苯硫磷(杀虫药),EPN,T60.0,X48.-,X68.-,Y18.-,
 1584,0,苯明青霉素(抗生素),Benethamine penicillin,T36.0,X44.-,X64.-,Y14.-,Y40.0
 1584,0,苯那普利-现译名贝那普利,Benazepril,T46.4,X44.-,X64.-,Y14.-,Y52.4
-1584,0,苯乃静-现译名贝那替泰,Benactyline,T44.3,X43.-,X63.-,Y13.-,Y51.3
+1584,0,苯乃静-现译名贝那替泰,Benactyzine,T44.3,X43.-,X63.-,Y13.-,Y51.3
 1584,0,苯哌啶醋酸甲酯 - 现译名,Methylphenidate,T43.6,X41.-,X61.-,Y11.-,Y49.7
 1584,0,苯哌利定(镇痛药),Phenoperidine,T40.4,X42.-,X62.-,Y12.-,Y45.0
 1584,0,苯哌利多(抗精神病药),Benperidol,T43.4,X41.-,X61.-,Y11.-,Y49.4
@@ -460,7 +459,7 @@
 1584,0,苯替酪胺[苯酪肽](诊断用药),Bentiromide,T50.8,X44.-,X64.-,Y14.-,Y57.6
 1584,0,苯酮类-现译名二苯甲酮类,Benzophenones,T49.3,X44.-,X64.-,Y14.-,Y56.3
 1585,0,苯托沙敏(抗组胺药),Phenyltoloxamine,T45.0,X44.-,X64.-,Y14.-,Y43.0
-1585,0,苯妥英[二苯乙内酰胺](镇痛痢药),"Phenytoin, Diphenylhydantoin",T42.0,X41.-,X61.-,Y11.-,
+1585,0,苯妥英[二苯乙内酰胺](抗癫痫药),"Phenytoin, Diphenylhydantoin",T42.0,X41.-,X61.-,Y11.-,Y46.2
 1585,1,伴有苯巴比妥,with phenobarbital,T42.3,X41.-,X61.-,Y11.-,Y47.0
 1585,0,苯溴马隆(抗痛风药),Benzbromarone,T50.4,X44.-,X64.-,Y14.-,Y54.8
 1585,0,苯氧苄胺- 现译名 酚苄明,Phenoxybenzamine,T46.7,X44.-,X64.-,Y14.-,Y52.7
@@ -623,7 +622,7 @@
 1588,1,氯化,chlorinated,T52.4,X46.-,X66.-,Y16.-,
 1588,1,蒸气,vapor,T52.4,X46.-,X66.-,Y16.-,
 1588,0,丙酮苄羟香豆素-现译名华法林,Warfarin,T45.5,X44.-,X64.-,Y14.-,Y44.2
-1588,0,丙烷(装在移动罐车中运输的),Propane (distributed,T59.8,X47.-,X67.-,Y17.-,
+1588,0,丙烷(装在移动罐车中运输的),Propane (distributed in mobile container),T59.8,X47.-,X67.-,Y17.-,
 1588,1,不完全燃烧的,incomplete combustion,T58,X47.-,X67.-,Y17.-,
 1588,1,经管道输送的,distributed through pipes,T59.8,X47.-,X67.-,Y17.-,
 1588,0,丙戊酸(镇癫疯药),Valproic acid,T42.6,X41.-,X61.-,Y11.-,Y46.5
@@ -750,7 +749,7 @@
 1592,1,乙(醇),ethyl,T51.0,X45.-,X65.-,Y15.-,
 1592,1,异丙(醇),isopropyl,T51.2,X45.-,X65.-,Y15.-,
 1592,1,饮料,beverage,T51.0,X45.-,X65.-,Y15.-,
-1592,1,蒸气(任何类型的醇),vapor(from any type of,T59.8,X47.-,X67.-,Y17.-,
+1592,1,蒸气(任何类型的醇),vapor (from any type of alcohol),T59.8,X47.-,X67.-,Y17.-,
 1592,1,制止剂NEC,deterrent NEC,T50.6,X44.-,X64.-,Y14.-,Y57.3
 1592,0,雌二醇,"Oestradiol,Estradiol",T38.5,X44.-,X64.-,Y14.-,Y42.5
 1592,1,伴有睾酮,with testosterone,T38.7,X44.-,X64.-,Y14.-,Y42.7
@@ -809,7 +808,7 @@
 1593,0,醋酸环己酯(香料),Cyclohexyl acetate,T52.8,X46.-,X66.-,Y16.-,
 1594,0,醋酸麦迪霉素 - 现译名,Miokamycin,T36.3,X44.-,X64.-,Y14.-,Y40.3
 1594,0,醋酸乙酯,Ethyl acetate,T52.8,X46.-,X66.-,Y16.-,
-1594,0,醋硝香豆素[醋硝香豆醇][新抗凝](抗凝药),"Acenocoumarin, Acenocoumarol, Nicoumalone",T45.5,X44.-,X64.-,Y14.-,
+1594,0,醋硝香豆素[醋硝香豆醇][新抗凝](抗凝药),"Acenocoumarin, Acenocoumarol, Nicoumalone",T45.5,X44.-,X64.-,Y14.-,Y44.2
 1594,0,醋洋地黄毒苷,Acetyldigitoxin,T46.0,X44.-,X64.-,Y14.-,Y52.0
 1594,0,醋竹桃霉素[三乙酰夹竹桃霉素](抗生素),"Triacetyloleandomycin, Troleandomycin",T36.3,X44.-,X64.-,Y14.-,Y40.3
 1594,0,催产素 - 现译名 缩宫素,Oxytocin,T48.0,X44.-,X64.-,Y14.-,Y55.0
@@ -871,7 +870,7 @@
 1596,1,芥,mustard,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1596,1,氧化(氮)(气体),oxide (gas),T59.0,X47.-,X67.-,Y17.-,
 1596,0,氮丙啶(螯合剂),Aziridine(chelating),T54.1,X49.-,X69.-,Y19.-,
-1596,0,氮芥(抗肿瘤药),"Chlormethine,Mechlore-",T45.1,X44.-,X64.-,Y14.-,Y43.3
+1596,0,氮芥(抗肿瘤药),Chlormethine,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1596,0,氮芥+长春新碱+泼尼松+丙卡巴肼,MOPP (mechlorethamine + vincristine + prednisone + procarbazine),T45.1,X44.-,X64.-,Y14.-,Y43.3
 1596,0,氮烯咪胺-现译名达卡巴嗪,"Dacarbazine, DTIC",T45.1,X44.-,X64.-,Y14.-,Y43.3
 1596,0,氮草斯汀(抗组胺药),Azelastine,T45.0,X44.-,X64.-,Y14.-,Y43.0
@@ -990,7 +989,7 @@
 1598,0,电池酸或液体,Battery acid or fluid,T54.2,X49.-,X69.-,Y19.-,
 1598,0,电解质平衡药,Electrolyte balance drug,T50.3,X44.-,X64.-,Y14.-,Y54.6
 1598,0,淀粉(药用辅料),Starch,T50.9,X44.-,X64.-,Y14.-,Y57.4
-1598,0,淀粉酶(助消化药),"Diastase, Amylase",T47.5,X44.-,X64.-,Y14.-,Y57.4
+1598,0,淀粉酶(助消化药),"Diastase, Amylase",T47.5,X44.-,X64.-,Y14.-,Y53.5
 1599,0,靛胭脂(诊断用药),Indigo carmine,T50.8,X44.-,X64.-,Y14.-,Y57.6
 1599,0,蝶酰谷氨酸 - 现译名 叶酸,Pteroylglutamic acid,T45.8,X44.-,X64.-,Y14.-,Y44.1
 1599,0,叠氮酸，叠氮化物,"Hydrazoic acid, azides",T54.2,X49.-,X69.-,Y19.-,
@@ -1040,7 +1039,7 @@
 1600,0,丁肾素-现译名乙基去甲,Ethylnorepinephrine,T48.6,X44.-,X64.-,Y14.-,Y55.6
 1600,0,丁四硝酯[赤鲜醇四硝酸酯],Erythrol tetranitrate,T46.3,X44.-,X64.-,Y14.-,Y52.3
 1600,0,"丁酮,2-丁酮","Butanone, 2-butanone",T52.4,X46.-,X66.-,Y16.-,
-1600,0,丁烷(装在移动罐车中运输的),Butane (distributed,T59.8,X47.-,X67.-,Y17.-,
+1600,0,丁烷(装在移动罐车中运输的),Butane (distributed in mobile container),T59.8,X47.-,X67.-,Y17.-,
 1600,1,不完全燃烧的,incomplete combustion,T58,X47.-,X67.-,Y17.-,
 1600,1,经管道输送的,distributed through pipes,T59.8,X47.-,X67.-,Y17.-,
 1600,0,"酊,碘-见碘","Tincture, iodine-see Iodine",,,,,
@@ -1120,7 +1119,7 @@
 1602,0,二苯美仑(脑功能改善药),Bifemelane,T43.2,X41.-,X61.-,Y11.-,Y49.2
 1602,0,二苯哌己酮-现译名地匹哌酮,Dipipanone,T40.4,X42.-,X62.-,Y12.-,Y45.0
 1602,0,二苯西平(抗抑郁药),Dibenzepin,T43.0,X41.-,X61.-,Y11.-,Y49.0
-1602,0,二苯乙丙酰脲 - 现译名 苯妥英,"Diphenylhydantoin, Phenytoin",T42.0,X41.-,X61.-,Y11.-,
+1602,0,二苯乙丙酰脲 - 现译名 苯妥英,"Diphenylhydantoin, Phenytoin",T42.0,X41.-,X61.-,Y11.-,Y46.2
 1602,0,二苯乙酸莨菪酯- 现译名,Tropacine,T44.3,X43.-,X63.-,Y13.-,Y51.3
 1602,0,二苯茚酮[双苯茚酮](抗凝药),"Diphenadione, Diphacinone",T45.5,X44.-,X64.-,Y14.-,Y44.2
 1602,1,灭鼠剂,rodenticide,T60.4,X48.-,X68.-,Y18.-,
@@ -1141,7 +1140,7 @@
 1602,1,硫酸(二甲酯)(烟雾),sulfate (fumes),T59.8,X47.-,X67.-,Y17.-,
 1602,2,液体,liquid,T65.8,X49.-,X69.-,Y19.-,
 1602,1,胂酸,"arsine, arsinic acid",T57.0,X48.-,X68.-,Y18.-,
-1602,1,肽酸(二甲酯),phthalate,T49.3,X44.-,X64.-,Y18.-,Y56.3
+1602,1,酞酸(二甲酯),phthalate,T49.3,X44.-,X64.-,Y14.-,Y56.3
 1603,1,碳酸(二甲酯),carbonate,T52.8,X46.-,X66.-,Y16.-,
 1603,1,酮,ketone,T52.4,X46.-,X66.-,Y16.-,
 1603,2,蒸气,vapor,T52.4,X46.-,X66.-,Y16.-,
@@ -1169,10 +1168,10 @@
 1603,1,药用,medicinal,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1603,0,二氯苯,Dichlorobenzene,T53.7,X46.-,X66.-,Y16.-,
 1603,0,二氯苄醇(消毒防腐剂),Dichlorobenzyl alcohol,T49.6,X44.-,X64.-,Y14.-,Y56.6
-1603,0,二氯丙醇,"Dichlorhydrin, dichloro-",T52.8,X46.-,X66.-,Y16.-,
+1603,0,二氯丙醇,"Dichlorhydrin, dichlorohydrin, alpha-dichlorohydrin",T52.8,X46.-,X66.-,Y16.-,
 1603,0,二氯丙酸,Dichloropropionic acid,T60.3,X48.-,X68.-,Y18.-,
 1603,0,二氯丙烯(杀线虫药),Dichloropropene,T60.3,X48.-,X68.-,Y18.-,
-1603,0,二氯二苯二氯乙烯(杀虫药),DDE (bis(chlorophenyl),T60.2,X48.-,X68.-,Y18.-,
+1603,0,二氯二苯二氯乙烯(杀虫药),DDE (bis(chlorophenyl)-dichloroethylene),T60.2,X48.-,X68.-,Y18.-,
 1603,0,二氯二苯三氯乙烷(粉尘),DDT (dust),T60.1,X48.-,X68.-,Y18.-,
 1603,0,二氯二氟甲烷[氟利昂12],Dichlorodifluoromethane,T53.5,X46.-,X66.-,Y16.-,
 1603,0,二氯二乙硫醚 - 现译名 芥子气,Dichloroethyl sulfide,T59.8,X47.-,X67.-,Y17.-,
@@ -1192,7 +1191,7 @@
 1604,0,二茂镍,Nickelocene,T56.8,X49.-,X69.-,Y19.-,
 1604,0,二硼烷(气体),Diborane (gas),T59.8,X47.-,X67.-,Y17.-,
 1604,0,二羟苯基丙氨酸-现译名多巴,Dopa,T42.8,X41.-,X61.-,Y11.-,Y46.7
-1604,0,二羟丙茶碱(支气管扩张药),Dihydroxypropyl theophyllin,T48.6,X44.-,X64.-,Y14.-,Y55.6
+1604,0,二羟丙茶碱(支气管扩张药),Dihydroxypropyl theophylline,T50.2,X44.-,X64.-,Y14.-,Y54.5
 1604,0,二羟基蒽酚- 现译名 地蒽酚,"Dithranol, Anthralin",T49.4,X44.-,X64.-,Y14.-,Y56.4
 1604,0,二羟基蒽醌[茜素](缓泻药),Dianthone,T47.2,X44.-,X64.-,Y14.-,Y53.2
 1604,0,二羟化铝碳酸钠(制酸药),Dihydroxyaluminum,T47.1,X44.-,X64.-,Y14.-,Y53.1
@@ -1247,7 +1246,7 @@
 1605,1,二氧化物[二噁烷],dioxide,T52.8,X46.-,X66.-,Y16.-,
 1605,1,乙二醇[二甘醇](单乙酸盐),glycol (monoacetate),T52.8,X46.-,X66.-,Y16.-,
 1605,0,(单丁基乙醚),(monoethyl ether),,,,,
-1605,0,(单乙基乙醚),"Diamorphine, Diacetylmorphine",T40.1,X42.-,X62.-,Y12.-,
+1605,0,(单乙基乙醚),"Diamorphine, Diacetylmorphine",T40.1,X42.-,X62.-,Y12.-,Y45.0
 1605,0,二乙酰吗啡 - 现译名 二醋吗啡,Diamorphine,T40.1,X42.-,X62.-,Y12.-,Y45.0
 1605,0,二乙溴乙酰脲-现译名卡溴脲,Carbromal,T42.6,X41.-,X61.-,Y11.-,Y47.4
 1605,0,二异丙胺(抗心绞痛药，,Diisopropylamine,T46.3,X44.-,X64.-,Y14.-,Y52.3
@@ -1374,7 +1373,7 @@
 1609,0,夫马洁林[夫马菌素](抗生素),Fumagillin,T36.8,X44.-,X64.-,Y14.-,Y40.8
 1609,0,夫马菌素-现译名夫马洁林,Fumagillin,T36.8,X44.-,X64.-,Y14.-,Y40.8
 1609,0,夫沙芬净(抗生素),Fusafungine,T36.8,X44.-,X64.-,Y14.-,Y40.8
-1609,0,夫西地酸[褐霉酸](乙醇胺)(钠)(抗生素),"Fusidate (ethanolamine)(sodium), Fusidic acid",T36.8,X44.-,X64.-,Y14.-,
+1609,0,夫西地酸[褐霉酸](乙醇胺)(钠)(抗生素),"Fusidate (ethanolamine)(sodium), Fusidic acid",T36.8,X44.-,X64.-,Y14.-,Y40.8
 1609,0,呋喃硫胺(维生素类),Fursultiamine,T45.2,X44.-,X64.-,Y14.-,Y57.7
 1609,0,呋喃妥因(尿路抗菌药),Nitrofurantoin,T37.8,X44.-,X64.-,Y14.-,Y41.8
 1609,0,呋喃西林(消毒防腐剂),"Nitrofural, Nitrofurazone",T49.0,X44.-,X64.-,Y14.-,Y56.0
@@ -1416,8 +1415,7 @@
 1610,0,氟可龙(肾上腺皮质激素类),Fluocortolone,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1610,0,氟喹酮[氨氟喹酮](骨骼肌松弛药),Afloqualone,T42.8,X41.-,X61.-,Y11.-,Y46.8
 1610,0,氟利昂,Freon,T53.5,X46.-,X66.-,Y16.-,
-1610,0,氟利昂 11 NEC -现译名,Trichlorofluoromethane,T53.5,X46.-,X66.-,Y16.-,
-1610,0,氟利昂,NEC,,,,,
+1610,0,氟利昂 11 NEC -现译名 三氯氟甲烷,Trichlorofluoromethane NEC,T53.5,X46.-,X66.-,Y16.-,
 1610,0,氟磷酸杀虫药,Fluorophosphate insecticide,T60.0,X48.-,X68.-,Y18.-,
 1610,0,氟柳双胺-现译名普洛加胺,Progabide,T42.6,X41.-,X61.-,Y11.-,Y46.6
 1610,0,氟铝酸钠(蒸气),Cryolite (vapor),T60.1,X48.-,X68.-,Y18.-,
@@ -1430,7 +1428,7 @@
 1610,0,氟米松(糖皮质激素),Flumetasone,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1610,0,氟尼缩松(肾上腺皮质激素类),Flunisolide,T48.6,X44.-,X64.-,Y14.-,Y55.6
 1610,0,氟尿苷-现译名,Floxuridine,T45.1,X44.-,X64.-,Y14.-,Y43.3
-1610,0,氟尿嘧啶+多柔比星+环磷酰胺,FAC (fluorouracil +,T45.1,X44.-,X64.-,Y14.-,Y43.3
+1610,0,氟尿嘧啶+多柔比星+环磷酰胺,FAC (fluorouracil + doxorubicin + cyclophosphamide),T45.1,X44.-,X64.-,Y14.-,Y43.3
 1610,0,氟尿嘧啶(抗肿瘤药),Fluorouracil,T45.1,X44.-,X64.-,Y14.-,Y43.1
 1610,0,氟脲嘧啶脱氧核苷[氟尿苷],Floxuridine,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1610,0,氟诺洛芬(抗炎镇痛药),Flunoxaprofen,T39.3,X40.-,X60.-,Y10.-,Y45.3
@@ -1545,9 +1543,9 @@
 1613,0,甘露莫司汀(抗肿瘤药),Mannomustine,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1613,0,甘珀酸[生胃酮](抗溃疡药),Carbenoxolone,T47.1,X44.-,X64.-,Y14.-,Y53.1
 1613,0,甘羟铝[氨基乙酸二羟化铝](抗酸药),Dihydroxyaluminum aminoacetate,T47.1,X44.-,X64.-,Y14.-,Y53.1
-1614,0,甘油[丙三醇](泻药，药用辅料),"Glycerol, Glycerin",T47.4,X44.-,X64.-,Y14.-,Y55.4
+1614,0,甘油[丙三醇](泻药，药用辅料),"Glycerol, Glycerin",T47.4,X44.-,X64.-,Y14.-,Y53.4
 1614,1,碘化,iodinated,T48.4,X44.-,X64.-,Y14.-,Y55.4
-1614,1,静脉内的,inu,T50.3,X44.-,X64.-,Y14.-,Y54.6
+1614,1,静脉内的,intravenous,T50.3,X44.-,X64.-,Y14.-,Y54.6
 1614,1,硼砂,borax,T49.6,X44.-,X64.-,Y14.-,Y56.6
 1614,0,甘油基,Glyceryl,,,,,
 1614,1,三硝酸(甘油),trinitrate,T46.3,X44.-,X64.-,Y14.-,Y52.3
@@ -1646,7 +1644,7 @@
 1616,0,钴(非药用)(烟雾)(工业用),Cobalt (nonmedicinal),T56.8,X49.-,X69.-,Y19.-,
 1616,1,药用(微量)(氯化物),medicinal (trace)(chloride),T45.8,X44.-,X64.-,Y14.-,Y44.1
 1616,0,钴胺素[钴维生素],Cobalamine,T45.2,X44.-,X64.-,Y14.-,Y44.1
-1616,0,鼓风炉气体(含有一氧化碳),Blast furnace gas (carbon,T58,X47.-,X67.-,Y17.-,
+1616,0,鼓风炉气体(含有一氧化碳),Blast furnace gas (carbon monoxide from),T58,X47.-,X67.-,Y17.-,
 1616,0,瓜尔豆胶(膏化剂),Cyamopsis tetragonoloba,T46.6,X44.-,X64.-,Y14.-,Y52.6
 1616,0,瓜尔胶(药用),Guar gum (medicinal),T46.6,X44.-,X64.-,Y14.-,Y52.6
 1616,0,胍法辛(降压药),Guanfacine,T46.5,X44.-,X64.-,Y14.-,Y52.5
@@ -1704,7 +1702,7 @@
 1617,1,直肠的,rectal,T41.2,X44.-,X64.-,Y14.-,Y48.2
 1617,0,海索那林(支气管扩张药),Hexoprenaline,T48.6,X44.-,X64.-,Y14.-,Y55.6
 1617,0,海他西林(抗生素),Hetacillin,T36.0,X44.-,X64.-,Y14.-,Y40.0
-1617,0,氦,Helium,T48.7,X44.-,X64.-,Y14.-,Y55.7
+1617,0,氦(药用),Helium (medicinal),T48.7,X44.-,X64.-,Y14.-,Y55.7
 1617,0,含钾药,Potassium-retaining drug,T50.3,X44.-,X64.-,Y14.-,Y54.6
 1617,0,含金硫化锑,Golden sulfide of antimony,T56.8,X49.-,X69.-,Y19.-,
 1617,0,含水羊毛脂,Hydrous wool fat,T49.3,X44.-,X64.-,Y14.-,Y56.3
@@ -1821,7 +1819,7 @@
 1620,0,磺胺林(磺胺药),Sulfalene,T37.0,X44.-,X64.-,Y14.-,Y41.0
 1620,0,磺胺氯达嗪(磺胺药),Sulfachlorpyridazine,T37.0,X44.-,X64.-,Y14.-,Y41.0
 1620,0,磺胺洛西酸(磺胺药),"Sulfaloxate, Sulfaloxic acid",T37.0,X44.-,X64.-,Y14.-,Y41.0
-1620,0,磺胺马奈(磺胺药),Sulfamozone,T39.2,X40.-,X60.-,Y10.-,
+1620,0,磺胺马宗(磺胺药),Sulfamazone,T39.2,X40.-,X60.-,Y10.-,Y45.8
 1620,0,磺胺米隆(磺胺药),Mafenide,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1620,0,磺胺嘧啶(磺胺药),"Sulfadiazine,Sulphadiazine",T37.0,X44.-,X64.-,Y14.-,Y41.0
 1620,0,磺胺培林,Sulfaperin,T37.0,X44.-,X64.-,Y14.-,Y41.0
@@ -1855,15 +1853,15 @@
 1622,0,肌安宁-现译名卡立普多,Carisoprodol,T42.8,X41.-,X61.-,Y11.-,Y46.8
 1622,0,肌醇,Inositol,T50.9,X44.-,X64.-,Y14.-,Y57.1
 1622,1,烟酸酯,nicotinate,T46.7,X44.-,X64.-,Y14.-,Y52.7
-1622,0,"肌肉松弛药 - 见 松弛药, 肌肉","Muscle relaxant - see Relaxant, muscle",T42.8,X41.-,X61.-,Y11.-,
+1622,0,"肌肉松弛药 - 见 松弛药, 肌肉","Muscle relaxant - see Relaxant, muscle",,,,,
 1622,0,肌肉紧张抑制药，中枢NEC,Muscle-tone depressant,T42.8,X41.-,X61.-,Y11.-,Y46.8
 1622,1,特指的NEC,specified NEC,T42.8,X41.-,X61.-,Y11.-,Y46.8
 1622,0,肌肉作用药NEC,Muscle-action drug NEC,T48.2,X44.-,X64.-,Y14.-,Y55.2
 1622,0,鸡油菌黄质-现译名眦黄质,Canthaxanthin,T50.9,X44.-,X64.-,Y14.-,Y57.8
 1622,0,激动药(剂)[显效药(剂)],Agonist,,,,,
 1622,1,主要为,predominantly,,,,,
-1622,2,α肾上腺素能受体,a-adrenoreceptor,T44.4,X43.-,X63.-,Y13.-,Y51.4
-1622,2,β肾上腺素能受体,β-adrenoreceptor,T44.5,X43.-,X63.-,Y13.-,Y51.5
+1622,2,α肾上腺素能受体,Alpha-adrenoreceptor,T44.4,X43.-,X63.-,Y13.-,Y51.4
+1622,2,β肾上腺素能受体,Beta-adrenoreceptor,T44.5,X43.-,X63.-,Y13.-,Y51.5
 1622,0,激素NEC,Hormone NEC,T38.8,X44.-,X64.-,Y14.-,Y42.8
 1622,1,癌治疗,cancer therapy,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1622,1,垂体后叶NEC,pituitary (posterior) NEC,T38.8,X44.-,X64.-,Y14.-,Y42.8
@@ -2066,7 +2064,7 @@
 1627,0,甲氧西林(抗生素),"Meticillin, Methicillin",T36.0,X44.-,X64.-,Y14.-,Y40.0
 1627,0,甲氧乙心安 - 现译名 美托洛尔,Metoprolol,T44.7,X43.-,X63.-,Y13.-,Y51.7
 1627,0,甲乙哌酮(镇静催眠药),Methyprylon,T42.6,X41.-,X61.-,Y11.-,Y47.8
-1627,0,甲乙双酮[帕腊美萨酮](镇痛病药),"Isoethadione, Paramethadione",T42.2,X41.-,X61.-,Y11.-,
+1627,0,甲乙双酮[帕腊美萨酮](镇痛病药),"Isoethadione, Paramethadione",T42.2,X41.-,X61.-,Y11.-,Y46.1
 1627,0,甲己烯雌酚,Dimestrol,T38.5,X44.-,X64.-,Y14.-,Y42.5
 1627,0,甲异辛烯胺-现译名异美汀,Isometheptene,T44.3,X43.-,X63.-,Y13.-,Y51.3
 1627,0,甲吲洛尔(β受体阻滞药),Mepindolol,T44.7,X43.-,X63.-,Y13.-,Y51.7
@@ -2141,7 +2139,7 @@
 1628,1,软膏,ointment,T49.1,X44.-,X64.-,Y14.-,Y56.1
 1628,1,烟雾,fumes,T59.8,X47.-,X67.-,Y17.-,
 1628,1,药用,medicinal,T49.1,X44.-,X64.-,Y14.-,Y56.1
-1628,1,樟脑,camphor .-,T60.1,X48.-,X68.-,Y18.-,
+1628,1,樟脑,camphor,T60.1,X48.-,X68.-,Y18.-,
 1628,1,蒸馏物,distillate,T49.1,X44.-,X64.-,Y14.-,Y56.1
 1629,0,角叉藻聚糖(润药),Carrageenan,T47.8,X44.-,X64.-,Y14.-,Y53.8
 1629,0,角质促成剂 NEC,Keratoplastic NEC,T49.4,X44.-,X64.-,Y14.-,Y56.4
@@ -2150,8 +2148,8 @@
 1629,0,酵母菌,Yeast,T45.2,X44.-,X64.-,Y14.-,Y57.7
 1629,1,干的(助消化药),dried,T45.2,X44.-,X64.-,Y14.-,Y57.7
 1629,0,拮抗药,Antagonist,,,,,
-1629,1,α肾上腺素能受体NEC,a-adrenoreceptor NEC,T44.6,X44.-,X64.-,Y14.-,Y51.6
-1629,1,β肾上腺素能受体NEC,β-adrenoreceptor NEC,T44.7,X43.-,X63.-,Y13.-,Y51.7
+1629,1,α肾上腺素能受体NEC,Alpha-adrenoreceptor NEC,T44.6,X43.-,X63.-,Y13.-,Y51.6
+1629,1,β肾上腺素能受体NEC,Beta-adrenoreceptor NEC,T44.7,X43.-,X63.-,Y13.-,Y51.7
 1629,1,阿片制剂,opiate,T50.7,X44.-,X64.-,Y14.-,Y50.1
 1629,1,抗凝血药,anticoagulant,T45.7,X44.-,X64.-,Y14.-,Y44.3
 1629,1,麻醉性镇痛药,narcotic Analgesic,T50.7,X44.-,X64.-,Y14.-,Y50.1
@@ -2229,7 +2227,7 @@
 1630,1,眼,eye,T49.5,X44.-,X64.-,Y14.-,Y56.5
 1630,0,酒石酸长春瑞滨(抗肿瘤药),Vinorelbine tartrate,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1631,0,酒石酸喷托铵(降压药),Pentolonium tartrate,T44.2,X43.-,X63.-,Y13.-,Y51.2
-1631,0,酒石酸戊双吡铵(降血压药),Pentapyrrolidinium,T44.2,X43.-,X63.-,Y13.-,Y51.2
+1631,0,酒石酸戊双吡铵(降血压药),Pentapyrrolinium (bitartrate),T44.2,X43.-,X63.-,Y13.-,Y51.2
 1631,0,局部作用药NEC,Local action drug NEC,T49.8,X44.-,X64.-,Y14.-,Y56.8
 1631,0,局部皮肤作用药NEC,Topical action drug NEC,T49.9,X44.-,X64.-,Y14.-,Y56.9
 1631,0,桔皮苷 - 现译名 橙皮苷,Hesperidin,T46.9,X44.-,X64.-,Y14.-,Y52.9
@@ -2357,7 +2355,7 @@
 1634,0,抗惊厥药 NEC,Anticonvulsant NEC,T42.6,X41.-,X61.-,Y11.-,Y46.6
 1634,1,巴比妥,barbiturate,T42.3,X41.-,X61.-,Y11.-,Y47.0
 1634,1,催眠药NEC,hypnotic NEC,T42.6,X41.-,X61.-,Y11.-,Y47.8
-1634,1,复合(伴有巴比妥),combination (with,T42.3,X41.-,X61.-,Y11.-,Y47.0
+1634,1,复合(伴有巴比妥),combination (with barbiturate),T42.3,X41.-,X61.-,Y11.-,Y47.0
 1634,1,琥珀酰亚胺[丁二酰亚胺],succinimide,T42.2,X41.-,X61.-,Y11.-,Y46.0
 1634,1,嘧啶二酮,pyrimidinedione,T42.6,X41.-,X61.-,Y11.-,Y46.6
 1634,1,脱氧巴比妥类,deoxybarbiturates,T42.3,X41.-,X61.-,Y11.-,Y46.3
@@ -2448,7 +2446,7 @@
 1636,1,类固醇,steroid,T38.7,X44.-,X64.-,Y14.-,Y42.7
 1636,1,生物碱的,alkaloidal,T45.1,X44.-,X64.-,Y14.-,Y43.2
 1636,0,考来替泼(降血脂药),Colestipol,T46.6,X44.-,X64.-,Y14.-,Y52.6
-1636,0,考来烯胺[消胆胺](树脂)(降血脂药),"Cholestyramine, Colestyramine (resin)",T46.6,X44.-,X64.-,Y14.-,
+1636,0,考来烯胺[消胆胺](树脂)(降血脂药),"Cholestyramine, Colestyramine (resin)",T46.6,X44.-,X64.-,Y14.-,Y52.6
 1636,0,柯桠素,Chrysarobin,T49.4,X44.-,X64.-,Y14.-,Y56.4
 1636,0,咳必清-现译名喷托维林,Carbetapentane,T48.3,X44.-,X64.-,Y14.-,Y55.3
 1636,0,咳美芬-现译名卡拉美芬,Caramiphen,T44.3,X43.-,X63.-,Y13.-,Y51.3
@@ -2459,7 +2457,7 @@
 1636,0,可的松(醋酸盐),Cortisone (acetate),T38.0,X44.-,X64.-,Y14.-,Y42.0
 1636,0,可的索 - 现译名 氢化可的松,Cortisol,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1636,0,可卡因,Cocaine,T40.5,X42.-,X62.-,Y12.-,Y48.3
-1636,0,可可碱(利尿剂)(钙水杨酸盐),Theobromine (calcium,T48.6,X44.-,X64.-,Y14.-,Y55.6
+1636,0,可可碱(利尿剂)(钙水杨酸盐),Theobromine (calcium salicylate),T48.6,X44.-,X64.-,Y14.-,Y55.6
 1636,1,钠水杨酸盐,sodium salicylate,T48.6,X44.-,X64.-,Y14.-,Y55.6
 1636,0,可乐定(降压药),Clonidine,T46.5,X44.-,X64.-,Y14.-,Y52.5
 1636,0,可利迈仙[粘杆菌素],Colimycin,T36.8,X44.-,X64.-,Y14.-,Y40.8
@@ -2639,7 +2637,7 @@
 1640,0,链球菌 DNA 酶[链道酶],Streptodornase,T45.3,X44.-,X64.-,Y14.-,Y43.6
 1640,0,链双霉素(抗生素),Streptoduocin,T36.5,X44.-,X64.-,Y14.-,Y40.5
 1640,0,链佐星(抗生素),Streptozocin,T45.1,X44.-,X64.-,Y14.-,Y43.3
-1640,0,两性霉素B[二性霉素B],Amphotericin B .-,T36.7,X44.-,X64.-,Y14.-,Y40.7
+1640,0,两性霉素B[二性霉素B],Amphotericin B,T36.7,X44.-,X64.-,Y14.-,Y40.7
 1640,0,亮氨卡因(局部麻醉药),Leucinocaine,T41.3,X44.-,X64.-,Y14.-,Y48.3
 1640,0,亮丙瑞林(抗肿瘤药),Leuprorelin,T38.8,X44.-,X64.-,Y14.-,Y42.8
 1641,0,邻苯二甲酸酐,Phthalic anhydride,T65.8,X49.-,X69.-,Y19.-,
@@ -2691,7 +2689,7 @@
 1642,0,硫卡利特[戊氧苯硫脲],Thiocarlide,T37.1,X44.-,X64.-,Y14.-,Y41.1
 1642,0,硫利达嗪[甲硫哒嗪],Thioridazine,T43.3,X41.-,X61.-,Y11.-,Y49.3
 1642,0,硫磷嗪(杀线虫药，土壤杀虫药),Thionazin,T60.0,X48.-,X68.-,Y18.-,
-1642,0,硫柳汞[乙汞硫代水杨酸钠] (消毒防腐剂),"Merthiolate, Thiomersal, Thimerosal",T49.0,X44.-,X64.-,Y14.-,
+1642,0,硫柳汞[乙汞硫代水杨酸钠] (消毒防腐剂),"Merthiolate, Thiomersal, Thimerosal",T49.0,X44.-,X64.-,Y14.-,Y56.0
 1642,0,硫氯酚[硫双二氯酚](杀虫药),Bithionol,T37.8,X44.-,X64.-,Y14.-,Y41.8
 1642,0,硫米齐特(利尿剂，降压药),Tiamizide,T50.2,X44.-,X64.-,Y14.-,Y54.5
 1642,0,硫鸟嘌呤(抗肿瘤药),"Tioguanine, Thioguanine",T45.1,X44.-,X64.-,Y14.-,Y43.1
@@ -2720,7 +2718,7 @@
 1642,0,硫乙拉嗪(镇痛药，抗组胺药),Thiethylperazine,T43.3,X41.-,X61.-,Y11.-,Y49.3
 1642,0,硫唑嘌呤(抗肿瘤药，免疫抑制药),Azathioprine,T45.1,X44.-,X64.-,Y14.-,Y43.4
 1642,0,瘤可宁-现译名苯丁酸氮芥,Chlorambucil,T45.1,X44.-,X64.-,Y14.-,Y43.3
-1642,0,柳氮磺吡啶[水杨酰偶氮磺胺；吡啶[磺胺药],"Salazosul-fapyridine, Sulfasalazine, Sulphasalazine,",T37.0,X44.-,X64.-,Y14.-,
+1642,0,柳氮磺吡啶[水杨酰偶氮磺胺；吡啶[磺胺药],"Salazosul-fapyridine, Sulfasalazine, Sulphasalazine,",T37.0,X44.-,X64.-,Y14.-,Y41.0
 1643,0,柳碳乙酯(解热镇痛药),Carbethyl salicylate,T39.0,X40.-,X60.-,Y10.-,Y45.1
 1643,0,龙胆,Gentian,T47.5,X44.-,X64.-,Y14.-,Y53.5
 1643,1,紫(消毒防腐剂),violet,T49.0,X44.-,X64.-,Y14.-,Y56.0
@@ -2807,8 +2805,8 @@
 1645,0,氯氮草[利眠宁],Chlordiazepoxide,T42.4,X41.-,X61.-,Y11.-,Y47.1
 1645,0,氯登妥因(抗真菌药),Clodantoin,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1645,0,氯地孕酮(孕激素类),Chlormadinone,T38.5,X44.-,X64.-,Y14.-,Y42.5
-1645,0,"氯碘羟喹(抗阿米巴药,局部抗菌药)","Iodochlorhydroxyquinoline, Clioquinol",T37.8,X44.-,X64.-,Y14.-,
-1645,0,氯丁醇-现译名 三氯叔丁醇,"Chlorobutanol, Chlorbutol",T49.0,X44.-,X64.-,Y14.-,Y56.0
+1645,0,"氯碘羟喹(抗阿米巴药,局部抗菌药)","Iodochlorhydroxyquinoline, Clioquinol",T37.8,X44.-,X64.-,Y14.-,Y41.8
+1645,0,氯丁醇-现译名 三氯叔丁醇,"Chlorobutanol, Chlorbutol",T42.6,X41.-,X61.-,Y11.-,Y47.2
 1645,0,氯丁替诺(镇咳药),Clobutinol,T48.3,X44.-,X64.-,Y14.-,Y55.3
 1645,0,氯二甲酚(消毒防腐剂),Chloroxylenol,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1645,0,氯二甲箭毒,Dimethyltubocurarinium,T48.1,X44.-,X64.-,Y14.-,Y55.1
@@ -2921,7 +2919,7 @@
 1647,0,氯特胺[邻氯苯丁胺],Clortermine,T50.5,X44.-,X64.-,Y14.-,Y57.0
 1647,0,氯替平(抗精神病药),Clorotepine,T44.3,X43.-,X63.-,Y13.-,Y51.3
 1647,0,氯筒箭毒碱,Tubocurarine (chloride),T48.1,X44.-,X64.-,Y14.-,Y55.1
-1647,0,氯脱氢甲基睾(甾)酮,Chlorodehydromethyltest-,T38.7,X44.-,X64.-,Y14.-,Y42.7
+1647,0,氯脱氢甲基睾(甾)酮,Chlorodehydromethyltestosterone,T38.7,X44.-,X64.-,Y14.-,Y42.7
 1647,0,氯噁唑仑(安定药),Cloxazolam,T42.4,X41.-,X61.-,Y11.-,Y47.1
 1647,0,氯烯雌醚(雌激素类),Chlorotrianisene,T38.5,X44.-,X64.-,Y14.-,Y42.5
 1647,0,氯硝柳胺(抗蠕虫药),Niclosamide,T37.4,X44.-,X64.-,Y14.-,Y41.4
@@ -2939,8 +2937,9 @@
 1648,0,氯草酸钾(弱安定药),Clorazepate dipotassium,T42.4,X41.-,X61.-,Y11.-,Y47.1
 1648,0,氯唑沙宗(神经肌肉阻断药),Chlorzoxazone,T42.8,X41.-,X61.-,Y11.-,Y46.8
 1648,0,氯唑西林[邻氯青霉素],Cloxacillin,T36.0,X44.-,X64.-,Y14.-,Y40.0
+1648,0,卵巢,Ovarian,,,,,
 1648,1,激素,hormone,T38.5,X44.-,X64.-,Y14.-,Y42.5
-1648,1,兴奋剂,stimulant .-,T38.5,X44.-,X64.-,Y14.-,Y42.5
+1648,1,兴奋剂,stimulant,T38.5,X44.-,X64.-,Y14.-,Y42.5
 1648,0,卵黄素,Lututrin,T48.2,X44.-,X64.-,Y14.-,Y55.2
 1648,0,人卵泡刺激素,"Follicle-stimulating hormone, human",T38.8,X44.-,X64.-,Y14.-,Y42.8
 1648,0,卵泡刺激素 - 现译名,Follicle-stimulating hormone,T38.8,X44.-,X64.-,Y14.-,Y42.8
@@ -2952,7 +2951,6 @@
 1648,0,罗沙替丁(组胺H2受体阻滞药),Roxatidine,T47.0,X44.-,X64.-,Y14.-,Y53.0
 1648,0,罗索沙星(抗感染药),Rosoxacin,T37.8,X44.-,X64.-,Y14.-,Y41.8
 1648,0,罗他霉素(抗生素),Rokitamycin,T36.3,X44.-,X64.-,Y14.-,Y40.3
-1648,0,罗索沙星(抗感染药),Roxotamine,T45.0,X44.-,X64.-,Y14.-,
 1648,0,罗西维林(解痉药),Rociverine,T44.3,X43.-,X63.-,Y13.-,Y51.3
 1648,0,罗托沙敏(抗组胺药),Rotoxamine,T45.0,X44.-,X64.-,Y14.-,Y43.0
 1648,0,萝芙木(生物碱),Rauwolfia (alkaloids),T46.5,X44.-,X64.-,Y14.-,Y52.5
@@ -3070,7 +3068,7 @@
 1651,0,美法仑(抗肿瘤药),Melphalan,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1651,0,美芬丁胺(升压药，血管收缩药),Mephentermine,T44.9,X43.-,X63.-,Y13.-,Y51.9
 1651,0,美芬雷司(食欲抑制药),Mefenorex,T50.5,X44.-,X64.-,Y14.-,Y57.0
-1651,0,美芬妥英[3-甲基苯乙妥因](镇痛药),"Mephenytoin, MethoinPhenantoin",T42.0,X41.-,X61.-,Y11.-,
+1651,0,美芬妥英[3-甲基苯乙妥因](抗癫痫药),"Mephenytoin, Methoin, Phenantoin",T42.0,X41.-,X61.-,Y11.-,Y46.2
 1651,1,伴有苯巴比妥,with phenobarbital,T42.3,X41.-,X61.-,Y11.-,Y47.0
 1651,0,美芬诺酮(解痉药),Mephenoxalone,T42.8,X41.-,X61.-,Y11.-,Y46.8
 1651,0,美芬新[唛酚生](神经肌肉阻断药),Mephenesin,T42.8,X41.-,X61.-,Y11.-,Y46.8
@@ -3080,7 +3078,7 @@
 1651,0,美金刚(抗震颤麻痹药),Memantine,T42.8,X41.-,X61.-,Y11.-,Y46.7
 1651,0,美卡拉明[梅坎米胺](抗高血压药),Mecamylamine,T44.2,X43.-,X63.-,Y13.-,Y51.2
 1651,0,美克立酯(外科材料),Mecrilate,T49.3,X44.-,X64.-,Y14.-,Y56.3
-1651,0,美克洛嗪(氢氯化物)[氯苯甲嗪](抗组胺药),"Meclizine (hydrochloride),Meclozine",T45.0,X44.-,X64.-,Y14.-,
+1651,0,美克洛嗪(氢氯化物)[氯苯甲嗪](抗组胺药),"Meclizine (hydrochloride),Meclozine",T45.0,X44.-,X64.-,Y14.-,Y43.0
 1651,0,美克西酮(防晒药),Mexenone,T49.3,X44.-,X64.-,Y14.-,Y56.3
 1651,0,美喹他嗪[甲喹吩嗪](抗组胺药),Mequitazine,T43.3,X41.-,X61.-,Y11.-,Y49.3
 1651,0,美拉肼(解痉药),Meladrazine,T44.3,X43.-,X63.-,Y13.-,Y51.3
@@ -3118,9 +3116,9 @@
 1652,0,美索丙嗪(抗精神病药),Methopromazine,T43.3,X41.-,X61.-,Y11.-,Y49.3
 1652,0,美索达嗪[甲砜哒嗪],Mesoridazine,T43.3,X41.-,X61.-,Y11.-,Y49.3
 1652,0,美索舍平(抗精神病药),Methoserpidine,T46.5,X44.-,X64.-,Y14.-,Y52.5
-1652,0,美他环素[甲烯土霉素](抗生素),Metacycline .-,T36.4,X44.-,X64.-,Y14.-,Y40.4
+1652,0,美他环素[甲烯土霉素](抗生素),Metacycline,T36.4,X44.-,X64.-,Y14.-,Y40.4
 1652,0,美他帕明(抗抑郁药),Metapramine,T43.0,X41.-,X61.-,Y11.-,Y49.0
-1652,0,美他沙酮(安定药),Metaxalone .-,T42.8,X41.-,X61.-,Y11.-,Y46.8
+1652,0,美他沙酮(安定药),Metaxalone,T42.8,X41.-,X61.-,Y11.-,Y46.8
 1652,0,美坦西林(抗生素),Metampicillin,T36.0,X44.-,X64.-,Y14.-,Y40.0
 1652,0,美替克仑(利尿剂),Meticrane,T50.2,X44.-,X64.-,Y14.-,Y54.5
 1652,0,美替拉酮[甲吡酮],Metyrapone,T50.8,X44.-,X64.-,Y14.-,Y57.6
@@ -3156,7 +3154,7 @@
 1653,0,门冬酰胺酶(抗肿瘤药),"Asparaginase, Colaspase",T45.1,X44.-,X64.-,Y14.-,Y43.3
 1653,0,锰(二氧化物)(盐),Manganese (dioxide) (salts),T57.2,X49.-,X69.-,Y19.-,
 1653,1,药用,medicinal,T50.9,X44.-,X64.-,Y14.-,Y54.9
-1653,0,孟德立胺-现译名 鸟洛托品,"Hexamine, Methenamine (mandelate)",T37.8,X44.-,X64.-,Y14.-,
+1653,0,孟德立胺-现译名 鸟洛托品,"Hexamine, Methenamine (mandelate)",T37.8,X44.-,X64.-,Y14.-,Y41.8
 1653,0,咪达唑仑(麻醉药),Midazolam,T42.4,X41.-,X61.-,Y11.-,Y47.1
 1653,0,咪康唑(抗真菌药),Miconazole,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1653,0,咪噻吩-现译名曲美芬,Trimethaphan,T44.2,X43.-,X63.-,Y13.-,Y51.2
@@ -3177,7 +3175,7 @@
 1653,0,米索硝唑(抗寄生虫药),Misonidazole,T37.3,X44.-,X64.-,Y14.-,Y41.3
 1653,0,米他芬-现译名硝甲酚汞,Nitromersol,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1653,0,米托蒽醌(抗肿瘤药),Mitoxantrone,T45.1,X44.-,X64.-,Y14.-,Y43.3
-1653,0,米托胍脲(抗肿瘤药),Mitoguanone,T45.1,X44.-,X64.-,Y14.-,
+1653,0,米托胍脲(抗肿瘤药),Mitoguazone,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1653,0,米托肼(抗肿瘤药),Mitopodozide,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1653,0,米托坦(抗肿瘤药),Mitotane,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1653,0,米雅菌[酪酸菌](治肠道菌群,Miyari bacteria,T47.6,X44.-,X64.-,Y14.-,Y53.6
@@ -3239,7 +3237,7 @@
 1655,1,醋氨磺胺苯砜(钠),acetosulfone,T37.1,X44.-,X64.-,Y14.-,Y41.1
 1655,1,醋碘苯酸(钠)(诊断用药),acetrizoate,T50.8,X44.-,X64.-,Y14.-,Y57.5
 1655,1,地布酸(钠),dibunate,T48.4,X44.-,X64.-,Y14.-,Y55.4
-1655,1,碘-碘塞罗宁(钠),1-triiodothyronine,T38.1,X44.-,X64.-,Y14.-,Y42.1
+1655,1,碘-碘塞罗宁(钠),l-triiodothyronine,T38.1,X44.-,X64.-,Y14.-,Y42.1
 1655,1,碘泊酸(钠),iopodate,T50.8,X44.-,X64.-,Y14.-,Y57.5
 1655,1,淀粉硫酸(钠),amylosulfate,T47.8,X44.-,X64.-,Y14.-,Y53.8
 1655,1,靛胭脂(用于肾功能试验),indigotin disulfonate,T50.8,X44.-,X64.-,Y14.-,Y57.6
@@ -3289,7 +3287,7 @@
 1656,1,氢氧化(钠),hydroxide,T54.3,X49.-,X69.-,Y19.-,
 1656,1,氰化(钠),cyanide,T65.0,X49.-,X69.-,Y19.-,
 1656,1,去氢胆酸(钠),dehydrocholate,T45.8,X44.-,X64.-,Y14.-,Y57.8
-1656,1,乳酸(钠)(复合物溶液),lactate (compound,T45.8,X44.-,X64.-,Y14.-,Y43.5
+1656,1,乳酸(钠)(复合物溶液),lactate (compound solution),T45.8,X44.-,X64.-,Y14.-,Y43.5
 1656,1,色甘酸(钠),cromoglicate,T48.6,X44.-,X64.-,Y14.-,Y55.6
 1656,1,砷酸(钠),arsenate,T57.0,X48.-,X68.-,Y18.-,
 1656,1,十二烷硫酸(钠)[月桂硫酸(钠)],lauryl (sulfate),T49.2,X44.-,X64.-,Y14.-,Y56.2
@@ -3299,7 +3297,6 @@
 1656,1,碳酸(钠)NEC,carbonate NEC,T54.3,X49.-,X69.-,Y19.-,
 1656,1,碳酸氢(钠)(抗酸药),bicarbonate,T47.1,X44.-,X64.-,Y14.-,Y53.1
 1656,1,铁依地酸(钠),feredetate,T45.8,X44.-,X64.-,Y14.-,Y44.0
-1656,1,磷酸(钠),ferdetrate,T45.8,X44.-,X64.-,Y14.-,
 1656,1,硝普(钠),nitroprusside,T46.5,X44.-,X64.-,Y14.-,Y52.5
 1656,1,硝酸(钠)(氧化剂),nitrate (oxidizing agent),T65.8,X49.-,X69.-,Y19.-,
 1656,1,溴化(钠),bromide,T42.6,X41.-,X61.-,Y11.-,Y47.4
@@ -3405,7 +3402,7 @@
 1659,0,牛痘免疫球蛋白,Vaccinia immune globulin,T50.9,X44.-,X64.-,Y14.-,Y59.3
 1659,0,牛磺莫司汀(抗肿瘤药),Tauromustine,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1659,0,诺氟沙星[氟哌酸](抗菌药),Norfloxacin,T36.8,X44.-,X64.-,Y14.-,Y40.8
-1659,0,"诺龙[去甲睾酮](呋喃丙酸盐)(雄激素,同化激素类)","Nortestosterone, Nandrolone (furanpropionate)",T38.7,X44.-,X64.-,Y14.-,
+1659,0,"诺龙[去甲睾酮](呋喃丙酸盐)(雄激素,同化激素类)","Nortestosterone, Nandrolone (furanpropionate)",T38.7,X44.-,X64.-,Y14.-,Y42.7
 1659,0,诺美孕酮(孕激素类),Nomegestrol,T38.5,X44.-,X64.-,Y14.-,Y42.5
 1659,0,诺米芬辛(抗抑郁药),Nomifensine,T43.2,X41.-,X61.-,Y11.-,Y49.2
 1659,0,诺昔硫脲(消毒防腐剂),Noxytiolin,T49.0,X44.-,X64.-,Y14.-,Y56.0
@@ -3682,7 +3679,7 @@
 1667,0,羟丙酮(抗寄生虫药),"Hydroxyquinoline (derivatives) NEC,",T37.8,X44.-,X64.-,Y14.-,Y41.8
 1667,0,羟氯喹(抗疟药),Hydroxychloroquine,T37.8,X44.-,X64.-,Y14.-,Y41.8
 1667,0,羟吗啡酮[氧吗啡酮](镇痛药),Oxymorphone,T40.2,X42.-,X62.-,Y12.-,Y45.0
-1667,0,羟萘苄芬宁[灭虫宁](抗蠕虫药),Bephenium hydro-,T37.4,X44.-,X64.-,Y14.-,Y41.4
+1667,0,羟萘苄芬宁[灭虫宁](抗蠕虫药),Bephenium hydroxynaphthoate,T37.4,X44.-,X64.-,Y14.-,Y41.4
 1667,0,羟哌氯丙嗪-现译名奋乃静,Perphenazine,T43.3,X41.-,X61.-,Y11.-,Y49.3
 1667,0,羟芪巴脒(抗感染药),Hydroxystilbamidine,T37.3,X44.-,X64.-,Y14.-,Y41.3
 1667,0,羟嗪(安定药),Hydroxyzine,T43.5,X41.-,X61.-,Y11.-,Y49.5
@@ -3846,7 +3843,7 @@
 1671,0,去氧氟尿苷(抗肿瘤药),Doxifluridine,T45.1,X44.-,X64.-,Y14.-,Y43.1
 1671,0,去氧核糖核酸酶-现译名脱氧,Deoxyribonuclease,T45.3,X44.-,X64.-,Y14.-,Y43.6
 1671,0,去氧甲睾酮,Metandrostenolone,T38.7,X44.-,X64.-,Y14.-,Y42.7
-1671,0,去氧麻黄碱[脱氧麻黄碱](中枢兴奋药),"Methylamphetamine, Methamphetamine, Metamfetamine, Desoxyephedrine",T43.6,X41.-,X61.-,Y11.-,
+1671,0,去氧麻黄碱[脱氧麻黄碱](中枢兴奋药),"Methylamphetamine, Methamphetamine, Metamfetamine, Desoxyephedrine",T43.6,X41.-,X61.-,Y11.-,Y49.7
 1671,0,去氧皮质甾类,Desoxycorticosteroid,T50.0,X44.-,X64.-,Y14.-,Y54.0
 1671,0,去氧皮甾酮[脱氧皮质酮],Deoxycortone,T50.0,X44.-,X64.-,Y14.-,Y54.0
 1671,0,去氧肾上腺素[苯福林](升压药),Phenylephrine,T44.4,X43.-,X63.-,Y13.-,Y51.4
@@ -3867,7 +3864,7 @@
 1671,1,伴有炔雌醇,with ethinylestradiol,T38.5,X44.-,X64.-,Y14.-,Y42.5
 1671,0,炔孕酮(孕激素类),Ethisterone,T38.5,X44.-,X64.-,Y14.-,Y42.5
 1672,0,燃料,Fuel,,,,,
-1672,1,国际疾病分类,"industrial, incomplete combustion",T58,X47.-,X67.-,Y17.-,
+1672,1,工业用，不完全燃烧,"industrial, incomplete combustion",T58,X47.-,X67.-,Y17.-,
 1672,1,气体(家用),gas (domestic use),T58,X47.-,X67.-,Y17.-,
 1672,1,汽车,automobile,T52.0,X46.-,X66.-,Y16.-,
 1672,2,废气，非运输中,"exhaust gas, not in transit",T58,X47.-,X67.-,Y17.-,
@@ -3881,9 +3878,9 @@
 1672,1,免疫血清,immune serum,T50.9,X44.-,X64.-,Y14.-,Y59.3
 1672,1,生长激素(HGH),growth hormone (HGH),T38.8,X44.-,X64.-,Y14.-,Y42.8
 1672,0,人蛋氨生长素(垂体激素类),Somatrem,T38.8,X44.-,X64.-,Y14.-,Y42.8
-1672,0,国际疾病分类,Immunoglobine human (intravenous)(normal),T50.9,X44.-,X64.-,Y14.-,
+1672,0,人免疫球蛋白(静脉内)(正常),"Immunoglobulin, human (intravenous) (normal)",T50.9,X44.-,X64.-,Y14.-,Y59.3
 1672,1,不变的,unmodified,T50.9,X44.-,X64.-,Y14.-,Y59.3
-1672,0,国际疾病分类,HGH (human growth hormone),T38.8,X44.-,X64.-,Y14.-,Y42.8
+1672,0,人生长激素,HGH (human growth hormone),T38.8,X44.-,X64.-,Y14.-,Y42.8
 1672,0,壬苯醇醚(表面活性药),Nonoxinol,T49.8,X44.-,X64.-,Y14.-,Y56.8
 1672,0,壬二酸[杜鹃花酸],Azelaic acid,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1672,0,壬基苯氧(聚乙氧基乙醇),Nonylphenoxy,T49.8,X44.-,X64.-,Y14.-,Y56.8
@@ -3991,7 +3988,7 @@
 1675,0,四环素,Tetracycline,T36.4,X44.-,X64.-,Y14.-,Y40.4
 1675,0,四甲二胂-现译名卡可基,"Cacodyl, cacodylic acid",T57.0,X48.-,X68.-,Y18.-,
 1675,0,四甲司林(杀虫药),Tetramethrin,T60.2,X48.-,X68.-,Y18.-,
-1675,0,四价铵[季铵],Quarternary ammonium,,,,,
+1675,0,四价铵[季铵],Quaternary ammonium,,,,,
 1675,1,副交感神经阻滞药,parasympatholytic,T44.3,X43.-,X63.-,Y13.-,Y51.3
 1675,1,抗感染药,anti-infective,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1675,1,神经节阻滞药,ganglion blocking,T44.2,X43.-,X63.-,Y13.-,Y51.2
@@ -4048,7 +4045,7 @@
 1677,0,噻萘普汀(抗抑郁药),Tianeptine,T43.0,X41.-,X61.-,Y11.-,Y49.0
 1677,0,噻帕米(冠脉扩张药),Tiapamil,T46.1,X44.-,X64.-,Y14.-,Y52.1
 1677,0,噻哌溴铵(抗胆碱药),Timepidium bromide,T44.3,X43.-,X63.-,Y13.-,Y51.3
-1677,0,噻替派(抗肿瘤药),"Thiotepa, Triethylenethio-",T45.1,X44.-,X64.-,Y14.-,Y43.3
+1677,0,噻替派(抗肿瘤药),Thiotepa,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1677,0,赛庚啶(抗组胺药),Cyproheptadine,T45.0,X44.-,X64.-,Y14.-,Y43.0
 1677,0,赛克立明(抗震颤麻痹药),Cycrimine,T44.3,X43.-,X63.-,Y13.-,Y51.3
 1677,0,赛克力嗪(抗吐剂),Cyclizine,T45.0,X44.-,X64.-,Y14.-,Y43.0
@@ -4129,7 +4126,7 @@
 1679,1,石油精-见石油英,"benzine(s), naphtha-see Ligroin",,,,,
 1679,1,乙醚-见石油英,ether-see Ligroin,,,,,
 1679,1,蒸气,vapor,T52.0,X46.-,X66.-,Y16.-,
-1679,0,石油精,Benzin(e),T52.0,X46.-,X66.-,Y16.-,
+1679,0,石油精,Benzin(e) – see Ligroin,,,,,
 1679,0,石油英(溶剂),Ligroin(e)(solvent),T52.0,X46.-,X66.-,Y16.-,
 1679,1,蒸气,vapor,T59.8,X47.-,X67.-,Y17.-,
 1679,0,食入物质NEC,Ingested substance NEC,T65.9,X49.-,X69.-,Y19.-,
@@ -4203,7 +4200,7 @@
 1681,0,双吗啉胺-现译名地莫拉明,Dimorpholamine,T50.7,X44.-,X64.-,Y14.-,Y50.0
 1681,0,双霉素-现译名 安福霉素,Amfomycin,T36.8,X44.-,X64.-,Y14.-,Y40.8
 1681,0,双嘧达莫[潘生丁](冠脉扩张药),Dipyridamole,T46.3,X44.-,X64.-,Y14.-,Y52.3
-1681,0,双氢除虫菌素-现译名,Ivermeetin,T37.4,X44.-,X64.-,Y14.-,
+1681,0,双氢除虫菌素-现译名,Ivermectin,T37.4,X44.-,X64.-,Y14.-,Y41.4
 1681,0,双氢睾酮(雄激素，同化激素类),Stanolone,T38.7,X44.-,X64.-,Y14.-,Y42.7
 1681,0,双氢可待因(酮),"Drocode, Dihydrocodeine",T40.2,X42.-,X62.-,Y12.-,Y45.0
 1681,0,双氢克尿噻-现译名氢氯噻嗪,Hydrochlorothiazide,T50.2,X44.-,X64.-,Y14.-,Y54.3
@@ -4241,7 +4238,7 @@
 1682,0,水杨烟肼(抗结核药),Salinazid,T37.1,X44.-,X64.-,Y14.-,Y41.1
 1682,0,顺铂(抗肿瘤药),Cisplatin,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1682,0,司巴丁[金雀花碱](抗心律失常药),Sparteine,T48.0,X44.-,X64.-,Y14.-,Y55.0
-1682,0,司可巴比妥[速可眠][西可巴比妥](催眠药),"Meballymal, Quinalbarbital, Secobarbital",T42.3,X41.-,X61.-,Y11.-,
+1682,0,司可巴比妥[速可眠][西可巴比妥](催眠药),"Meballymal, Quinalbarbital, Secobarbital",T42.3,X41.-,X61.-,Y11.-,Y47.0
 1682,0,司可巴比妥钠,Quinalbarbitone sodium,T42.3,X41.-,X61.-,Y11.-,Y47.0
 1682,0,司来吉兰(食欲抑制药),"Deprenyl, Selegiline",T42.8,X41.-,X61.-,Y11.-,Y46.7
 1682,0,司莫司汀(抗肿瘤药),Semustine,T45.1,X44.-,X64.-,Y14.-,Y43.3
@@ -4305,7 +4302,7 @@
 1684,0,弹性酶,Elastase,T47.5,X44.-,X64.-,Y14.-,Y53.5
 1684,0,痰易净 - 现译名 乙酰半胱氨酸,Acetylcysteine,T48.4,X44.-,X64.-,Y14.-,Y55.4
 1684,0,碳,Carbon,,,,,
-1684,1,氧化(碳)(由于不完全燃烧),monoxide (from incomplete,T58,X47.-,X67.-,Y17.-,
+1684,1,氧化(碳)(由于不完全燃烧),monoxide (from incomplete combustion),T58,X47.-,X67.-,Y17.-,
 1684,1,二氧化(碳)(气体),dioxide (gas),T59.7,X47.-,X67.-,Y17.-,
 1684,2,非药用,nonmedicinal,T59.7,X47.-,X67.-,Y17.-,
 1684,2,雪,snow,T49.4,X44.-,X64.-,Y14.-,Y56.4
@@ -4338,7 +4335,7 @@
 1685,0,惕各酰莨菪碱 - 现译名,Tigloidine,T44.3,X43.-,X63.-,Y13.-,Y51.3
 1685,0,锑(化合物)(蒸气)NEC,Antimony(compounds),T56.8,X49.-,X69.-,Y19.-,
 1685,1,二巯基琥珀酸(锑),dimercaptosuccinate,T37.3,X44.-,X64.-,Y14.-,Y41.3
-1685,1,二巯基琥珀酸(锑)钠,sodium dimercapto-,T37.3,X44.-,X64.-,Y14.-,Y41.3
+1685,1,二巯基琥珀酸(锑)钠,sodium dimercaptosuccinate,T37.3,X44.-,X64.-,Y14.-,Y41.3
 1685,1,酒石酸(锑)甲(钠),potassium (sodium),T50.3,X44.-,X64.-,Y14.-,Y54.9
 1685,1,氢化(锑),hydride,T56.8,X49.-,X69.-,Y19.-,
 1685,1,杀虫药(蒸气),pesticide (vapor),T60.8,X48.-,X68.-,Y18.-,
@@ -4482,7 +4479,7 @@
 1688,0,脱氧巴比妥类,Deoxybarbiturates,T42.3,X41.-,X61.-,Y11.-,Y46.3
 1688,0,脱氧肾上腺素,Oxedrine,T44.4,X43.-,X63.-,Y13.-,Y51.4
 1688,0,脱乙酰基毛花洋地黄苷C,Deslanoside,T46.0,X44.-,X64.-,Y14.-,Y52.0
-1688,0,铊(化合物)(粉尘)NEC,Thallium (compounds),T60.4,X48.-,X68.-,Y18.-,
+1688,0,铊(化合物)(粉尘)NEC,Thallium (compounds),T56.8,X49.-,X69.-,Y19.-,
 1688,1,杀虫药,pesticide,T60.4,X48.-,X68.-,Y18.-,
 1688,0,妥布霉素,Tobramycin,T36.5,X44.-,X64.-,Y14.-,Y40.5
 1688,0,妥卡尼(抗心律失常药),Tocainide,T46.2,X44.-,X64.-,Y14.-,Y52.2
@@ -4576,7 +4573,7 @@
 1691,1,醇,alcohol,T51.3,X45.-,X65.-,Y15.-,
 1691,1,氯,chloride,T53.6,X46.-,X66.-,Y16.-,
 1691,1,亚硝酸(戊酯),nitrite,T46.3,X44.-,X64.-,Y14.-,Y52.3
-1691,0,戊巴比妥(镇静催眠药),"Pentobarbital, Pento-",T42.3,X41.-,X61.-,Y11.-,Y47.0
+1691,0,戊巴比妥(镇静催眠药),"Pentobarbital, Pentobarbitone",T42.3,X41.-,X61.-,Y11.-,Y47.0
 1691,1,钠,sodium,T42.3,X41.-,X61.-,Y11.-,Y47.0
 1691,0,戊醇,Pentanol,T51.3,X45.-,X65.-,Y15.-,
 1691,0,戊二醛(药用),Glutaral (medicinal),T49.0,X44.-,X64.-,Y14.-,Y56.0
@@ -4608,7 +4605,7 @@
 1692,0,西尼二胺(抗组胺药),Thenyldiamine,T45.0,X44.-,X64.-,Y14.-,Y43.0
 1692,0,西诺沙星(抗生素),Cinoxacin,T37.8,X44.-,X64.-,Y14.-,Y41.8
 1692,0,西曲酸酯(抗炎镇痛药),Cetraxate,T47.1,X44.-,X64.-,Y14.-,Y53.1
-1692,0,西曲溴铵[溴棕二甲铵](消毒防腐剂),"Cetrimide, Cetrimonium bromide",T49.0,X44.-,X64.-,Y14.-,
+1692,0,西曲溴铵[溴棕二甲铵](消毒防腐剂),"Cetrimide, Cetrimonium bromide",T49.0,X44.-,X64.-,Y14.-,Y56.0
 1692,0,西塞氯铵,Cethexonium chloride,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1692,0,西沙必利(镇吐药),Cisapride,T47.8,X44.-,X64.-,Y14.-,Y53.8
 1692,0,西索米星[紫苏霉素](抗生素),Sisomicin,T36.5,X44.-,X64.-,Y14.-,Y40.5
@@ -4702,7 +4699,7 @@
 1694,0,硝普钠[硝基氢氰酸盐],Nitroprusside,T46.5,X44.-,X64.-,Y14.-,Y52.5
 1694,0,硝羟喹啉(尿路抗菌药),Nitroxoline,T37.8,X44.-,X64.-,Y14.-,Y41.8
 1694,0,硝酸,Aqua fortis,T54.2,X49.-,X69.-,Y19.-,
-1694,0,"硝酸甘油(药用)(血管扩张药, 抗心绞痛药)","Nitroglycerin, nitroglycerol (medicinal), Trinitrine",T46.3,X44.-,X64.-,Y14.-,
+1694,0,"硝酸甘油(药用)(血管扩张药, 抗心绞痛药)","Nitroglycerin, nitroglycerol (medicinal), Trinitrine",T46.3,X44.-,X64.-,Y14.-,Y52.3
 1694,1,非药用,nonmedicinal,T65.5,X49.-,X69.-,Y19.-,
 1694,0,硝酸纤维素[火棉],Nitrocellulose,T65.8,X49.-,X69.-,Y19.-,
 1694,1,漆,lacquer,T65.8,X49.-,X69.-,Y19.-,
@@ -4878,7 +4875,7 @@
 1698,1,氧化物,oxide,T41.0,X44.-,X64.-,Y14.-,Y48.0
 1698,1,乙醚醑剂,ether spirit,T46.3,X44.-,X64.-,Y14.-,Y52.3
 1698,0,亚硝基二甲胺,Nitrosodimethylamine,T65.3,X49.-,X69.-,Y19.-,
-1698,0,亚硝脲氮芥-现译名,Karmustine,T45.1,X44.-,X64.-,Y14.-,
+1698,0,亚硝脲氮芥-现译名,Carmustine,T45.1,X44.-,X64.-,Y14.-,Y43.3
 1698,0,亚叶酸[甲酰四氢叶酸],Folinic acid,T45.8,X44.-,X64.-,Y14.-,Y44.1
 1698,0,亚叶酸钙(叶酸拮抗药，解毒药),Citrovorum (factor),T45.8,X44.-,X64.-,Y14.-,Y44.1
 1698,0,亚乙基-又称,Ethylidene,,,,,
@@ -4891,7 +4888,7 @@
 1699,0,烟尘(产生自),Fumes (from),T59.9,X47.-,X67.-,Y17.-,
 1699,1,氧化碳,carbon monoxide,T58,X47.-,X67.-,Y17.-,
 1699,1,腐蚀性NEC,corrosive NEC,T59.8,X47.-,X67.-,Y17.-,
-1699,1,焦炭(家庭用火炉、壁炉),coke (in domestic stoves,T58,X47.-,X67.-,Y17.-,
+1699,1,焦炭(家庭用火炉、壁炉),"coke (in domestic stoves, fireplaces)",T58,X47.-,X67.-,Y17.-,
 1699,2,金属——见金属，或特指的金属,"metal - see Metals, or the specified metal",,,,,
 1699,1,木炭(家庭用),charcoal (domestic use),T58,X47.-,X67.-,Y17.-,
 1699,2,铅——见铅,lead - see Lead,,,,,
@@ -4922,7 +4919,7 @@
 1699,1,溶液,solution,T49.5,X44.-,X64.-,Y14.-,Y56.5
 1699,0,眼科用药 NEC,Ophthalmological drug NEC,T49.5,X44.-,X64.-,Y14.-,Y56.5
 1699,0,眼药NEC,Eye drug NEC,T49.5,X44.-,X64.-,Y14.-,Y56.5
-1699,0,羊毛脂(含水的),"Wool fat (hydrous),Lanolin",T49.3,X44.-,X64.-,Y14.-,Y56.5
+1699,0,羊毛脂(含水的),"Wool fat (hydrous),Lanolin",T49.3,X44.-,X64.-,Y14.-,Y56.3
 1699,0,阳离子交换树脂,Cation exchange resin,T50.3,X44.-,X64.-,Y14.-,Y54.6
 1700,0,洋地黄,Foxglove,T62.2,X49.-,X69.-,Y19.-,
 1700,0,洋地黄(叶)(糖苷),Digitalis (leaf)(glycoside),T46.0,X44.-,X64.-,Y14.-,Y52.0
@@ -4971,7 +4968,7 @@
 1701,1,物质NEC,substance NEC,T65.9,X49.-,X69.-,Y19.-,
 1701,0,伊巴他滨(抗肿瘤药),Ibacitabine,T37.5,X44.-,X64.-,Y14.-,Y41.5
 1701,0,伊达比星[去甲氧基柔红霉素],Idarubicin,T45.1,X44.-,X64.-,Y14.-,Y43.3
-1701,0,伊维菌素[双氢除虫菌素],Ivermeetin,T37.4,X44.-,X64.-,Y14.-,
+1701,0,伊维菌素[双氢除虫菌素],Ivermectin,T37.4,X44.-,X64.-,Y14.-,Y41.4
 1701,0,伊拉地平(血管扩张药),Isradipine,T46.1,X44.-,X64.-,Y14.-,Y52.1
 1701,0,伊洛前列素(前列腺素类),Iloprost,T46.7,X44.-,X64.-,Y14.-,Y52.7
 1701,0,伊米配能 - 现译名 亚胺培南,Imipenem,T36.0,X44.-,X64.-,Y14.-,Y40.0
@@ -4980,7 +4977,7 @@
 1701,0,伊文思蓝[偶氮蓝](诊断用药),Evans blue,T50.8,X44.-,X64.-,Y14.-,Y57.6
 1701,0,依比青霉素- 现译名 依匹西林,Epicillin,T36.0,X44.-,X64.-,Y14.-,Y40.0
 1701,0,依泊二醇(利尿剂),Epomediol,T50.9,X44.-,X64.-,Y14.-,Y57.1
-1701,0,依地酸[乙二胺四乙酸],"EDTA, Ethylenediamine-",T50.6,X44.-,X64.-,Y14.-,Y57.2
+1701,0,依地酸[乙二胺四乙酸],"EDTA, Ethylenediaminetetraacetic acid",T50.6,X44.-,X64.-,Y14.-,Y57.2
 1701,0,依地酸二钠,Disodium edetate,T50.6,X44.-,X64.-,Y14.-,Y57.2
 1701,0,依地酸三钠,Trisodium hydrogen edetate,T50.6,X44.-,X64.-,Y14.-,Y57.2
 1701,0,依地酸盐[维尔烯酸盐],Versenate,T50.6,X44.-,X64.-,Y14.-,Y57.2
@@ -5002,14 +4999,12 @@
 1701,0,依诺他滨(抗肿瘤药),Enocitabine,T45.1,X44.-,X64.-,Y14.-,Y43.1
 1701,0,依匹噻嗪(利尿剂),Epitizide,T50.2,X44.-,X64.-,Y14.-,Y54.3
 1701,0,依匹西林[依比青霉素](抗生素),Epicillin,T36.0,X44.-,X64.-,Y14.-,Y40.0
-1701,0,依普黄酮[异丙氧黄酮],Epirizole,T39.3,X40.-,X60.-,Y10.-,Y45.3
-1701,0,(动物用蛋白同化药),Ipriflavone,T46.3,X44.-,X64.-,Y14.-,Y52.3
-1701,0,依前列醇(前列腺素类),Eprazinone,T48.4,X44.-,X64.-,Y14.-,Y55.4
-1701,0,依曲康唑(抗真菌药),Epoprostenol,T45.5,X44.-,X64.-,Y14.-,Y44.4
-1701,0,依塞罗酯(降血脂药),Itraconazole,T37.8,X44.-,X64.-,Y14.-,Y41.8
-1701,0,依色林- 现译名 毒扁豆碱,Etiroxate,T46.6,X44.-,X64.-,Y14.-,Y52.6
-1701,0,依沙双酮(镇癫疯药),"Physostigmine, Eserine",T49.5,X44.-,X64.-,Y14.-,Y52.6
-1701,0,依沙双酮（镇痛药）,Ethadione,T42.2,X41.-,X61.-,Y11.-,Y46.1
+1701,0,依普黄酮[异丙氧黄酮](动物用蛋白同化药),Ipriflavone,T46.3,X44.-,X64.-,Y14.-,Y52.3
+1701,0,依前列醇(前列腺素类),Epoprostenol,T45.5,X44.-,X64.-,Y14.-,Y44.4
+1701,0,依曲康唑(抗真菌药),Itraconazole,T37.8,X44.-,X64.-,Y14.-,Y41.8
+1701,0,依塞罗酯(降血脂药),Etiroxate,T46.6,X44.-,X64.-,Y14.-,Y52.6
+1701,0,依色林- 现译名 毒扁豆碱,"Physostigmine, Eserine",T49.5,X44.-,X64.-,Y14.-,Y56.5
+1701,0,依沙双酮(抗癫痫药),Ethadione,T42.2,X41.-,X61.-,Y11.-,Y46.1
 1702,0,依沙维林(解痉药),Ethaverine,T44.3,X43.-,X63.-,Y13.-,Y51.3
 1702,0,依沙酰胺(抗真菌药),Exalamide,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1702,0,依沙吖啶(消毒防腐剂),Ethacridine,T49.0,X44.-,X64.-,Y14.-,Y56.0
@@ -5019,7 +5014,7 @@
 1702,0,依他尼钠,Etacrynate sodium,T50.1,X44.-,X64.-,Y14.-,Y54.4
 1702,0,依他尼酸[利尿酸],Etacrynic acid,T50.1,X44.-,X64.-,Y14.-,Y54.4
 1702,0,依他佐辛(镇痛药),Eptazocine,T40.4,X42.-,X62.-,Y12.-,Y45.0
-1702,0,依特柳酯(抗炎镇痛药),"Etersalate, Eterylate",T39.0,X40.-,,Y10.-,Y45.1
+1702,0,依特柳酯(抗炎镇痛药),"Etersalate, Eterylate",T39.0,X40.-,X60.-,Y10.-,Y45.1
 1702,0,依替福林(升压药),Etilefrine,T44.4,X43.-,X63.-,Y13.-,Y51.4
 1702,0,依替福嗪[氯乙苯噁嗪](安定药),Etifoxine,T42.6,X41.-,X61.-,Y11.-,Y47.8
 1702,0,依替卡因(局部麻醉药),Etidocaine,T41.3,X44.-,X64.-,Y14.-,Y48.3
@@ -5099,14 +5094,14 @@
 1703,0,乙醇,Ethanol,T51.0,X45.-,X65.-,Y15.-,
 1703,0,乙雌烯醇(雄激素，同化激素类),Ethylestrenol,T38.7,X44.-,X64.-,Y14.-,Y42.7
 1704,0,乙二胺茶碱,Ethylenediamine,T48.6,X44.-,X64.-,Y14.-,Y55.6
-1704,0,乙二胺四乙酸-现译名 依地酸,"EDTA, Ethylenediamine-",T50.6,X44.-,X64.-,Y14.-,Y57.2
+1704,0,乙二胺四乙酸-现译名 依地酸,"EDTA, Ethylenediaminetetraacetic acid",T50.6,X44.-,X64.-,Y14.-,Y57.2
 1704,0,乙二胺四乙酸盐,Ethylenedinitrilotetraacetate,T50.6,X44.-,X64.-,Y14.-,Y57.2
 1704,0,乙二醇(乙醚),Glycols (ether),T52.3,X46.-,X66.-,Y16.-,
 1704,0,乙非君(升压药),Etafedrine,T48.6,X44.-,X64.-,Y14.-,Y55.6
 1704,0,乙汞硫代水杨酸钠 - 现译名,Merthiolate,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1704,0,乙琥胺(镇癫疯药),Ethosuximide,T42.2,X41.-,X61.-,Y11.-,Y46.0
 1704,0,乙磺舒(抗痛风药),Etebenecid,T50.4,X44.-,X64.-,Y14.-,Y54.8
-1704,0,乙基对氯苯氧异丁酯,Ethylparachlorophenoxyi-,T46.6,X44.-,X64.-,Y14.-,Y52.6
+1704,0,乙基对氯苯氧异丁酯,Ethylparachlorophenoxyisobutyrate,T46.6,X44.-,X64.-,Y14.-,Y52.6
 1704,0,乙基吗啡(镇咳药),Ethylmorphine,T40.2,X42.-,X62.-,Y12.-,Y45.0
 1704,0,乙基去甲肾上腺素[丁肾素],Ethylnorepinephrine,T48.6,X44.-,X64.-,Y14.-,Y55.6
 1704,0,乙基紫苏霉素 - 现译名,Netilmicin,T36.5,X44.-,X64.-,Y14.-,Y40.5
@@ -5123,7 +5118,7 @@
 1704,1,石油(醚) - 见 石油英,petroleum - see Ligroin,,,,,
 1704,1,乙基(乙醚)(药用),ethyl (medicinal),T41.0,X44.-,X64.-,Y14.-,Y48.0
 1704,2,非药用,nonmedicinal,T52.8,X46.-,X66.-,Y16.-,
-1704,0,乙醚溶解性焦油蒸馏物,ESDT (ether-soluble,T49.1,X44.-,X64.-,Y14.-,Y56.1
+1704,0,乙醚溶解性焦油蒸馏物,ESDT (ether-soluble tar distillate),T49.1,X44.-,X64.-,Y14.-,Y56.1
 1704,0,乙嘧啶-现译名 乙胺嘧啶,Pyrimethamine,T37.2,X44.-,X64.-,Y14.-,Y41.2
 1704,0,乙内酰脲衍生物(治癫痈)NEC,Hydantoin derivative NEC,T42.0,X41.-,X61.-,Y11.-,Y46.2
 1704,0,乙羟茶碱[羟乙茶碱](血管扩张药),Etofylline,T46.7,X44.-,X64.-,Y14.-,Y52.7
@@ -5220,7 +5215,7 @@
 1706,0,异丁嗪酒石酸盐[三甲泼拉嗪],Trimeprazine (tartrate),T44.3,X43.-,X63.-,Y13.-,Y51.3
 1706,0,异丁特罗(支气管扩张药),Ibuterol,T48.6,X44.-,X64.-,Y14.-,Y55.6
 1706,0,异佛尔酮,Isophorone,T65.8,X49.-,X69.-,Y19.-,
-1706,0,异氟磷(抗胆碱酯酶药，缩瞳药),"Dyflos, Diisopropylfluoropho-",T44.0,X43.-,X63.-,Y13.-,Y51.0
+1706,0,异氟磷(抗胆碱酯酶药，缩瞳药),"Dyflos, Diisopropylfluorophosphonate",T44.0,X43.-,X63.-,Y13.-,Y51.0
 1707,0,异氟烷(麻醉药),Isoflurane,T41.0,X44.-,X64.-,Y14.-,Y48.0
 1707,0,异环磷酰胺(抗肿瘤药),"Ifosfamide, Isophosphamide",T45.1,X44.-,X64.-,Y14.-,Y43.3
 1707,0,异己酮,Hexone,T52.4,X46.-,X66.-,Y16.-,
@@ -5279,9 +5274,9 @@
 1708,1,抗肿瘤,antineoplastic,T50.9,X44.-,X64.-,Y14.-,Y59.8
 1708,1,狂犬病,rabies,T50.9,X44.-,X64.-,Y14.-,Y59.0
 1708,1,立克次体NEC,rickettsial NEC,T50.9,X44.-,X64.-,Y14.-,Y59.1
-1708,1,流行性感冒,influenza .-,T50.9,X44.-,X64.-,Y14.-,Y59.0
+1708,1,流行性感冒,influenza,T50.9,X44.-,X64.-,Y14.-,Y59.0
 1708,1,流行性腮腺炎,mumps,T50.9,X44.-,X64.-,Y14.-,Y59.0
-1708,1,落基山斑点热,Rocky Mountain spotted .-,T50.9,X44.-,X64.-,Y14.-,Y59.1
+1708,1,落基山斑点热,Rocky Mountain spotted fever,T50.9,X44.-,X64.-,Y14.-,Y59.1
 1708,1,麻疹,measles,T50.9,X44.-,X64.-,Y14.-,Y59.0
 1708,2,和流行性腮腺炎及风疹,withmumps and rubella,T50.9,X44.-,X64.-,Y14.-,Y59.0
 1708,1,破伤风,tetanus,T50.9,X44.-,X64.-,Y14.-,Y58.4
@@ -5295,10 +5290,10 @@
 1708,0,益钙灵-现译名依降钙素,Elcatonin,T50.9,X44.-,X64.-,Y14.-,Y54.7
 1708,0,益康唑(抗真菌药),Econazole,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1708,0,因子,Factor,,,,,
-1708,1,Ⅰ(纤维蛋白原),I (fibrinogen) .-,T45.8,X44.-,X64.-,Y14.-,Y44.6
-1708,1,Ⅲ(促凝血酶原激酶),Ⅲ((thromboplastin),T45.8,X44.-,X64.-,Y14.-,Y44.6
-1708,1,VI(抗血友病因子)(浓缩),VII (antihemophilic factor),T45.8,X44.-,X64.-,Y14.-,Y44.6
-1708,1,X复合的,X complex,T45.7,X44.-,X64.-,Y14.-,Y44.3
+1708,1,Ⅰ(纤维蛋白原),I (fibrinogen),T45.8,X44.-,X64.-,Y14.-,Y44.6
+1708,1,Ⅲ(促凝血酶原激酶),III (thromboplastin),T45.8,X44.-,X64.-,Y14.-,Y44.6
+1708,1,VIII(抗血友病因子)(浓缩),VIII (antihemophilic factor) (concentrate),T45.8,X44.-,X64.-,Y14.-,Y44.6
+1708,1,IX复合物,IX complex,T45.7,X44.-,X64.-,Y14.-,Y44.3
 1708,2,人,human,T45.8,X44.-,X64.-,Y14.-,Y44.6
 1708,0,银,Silver,T49.0,X44.-,X64.-,Y14.-,Y56.0
 1708,1,蛋白(银),protein,T49.5,X44.-,X64.-,Y14.-,Y56.5
@@ -5336,7 +5331,7 @@
 1709,1,尼哦[苯甲酸甲酯],Niobe,T52.8,X46.-,X66.-,Y16.-,
 1709,1,润滑,lubricating,T52.0,X46.-,X66.-,Y16.-,
 1709,1,烟雾,fumes,T59.8,X47.-,X67.-,Y17.-,
-1709,0,油漆[涂料]NEC,"Paint, Varnish NEC",T65.4,X49.-,X69.-,Y19.-,
+1709,0,油漆[涂料]NEC,Paint NEC,T65.6,X49.-,X69.-,Y19.-,
 1709,1,剥脱剂,stripper,T52.8,X46.-,X66.-,Y16.-,
 1709,1,铅(烟雾),lead (fumes),T56.0,X49.-,X69.-,Y19.-,
 1709,1,清除剂,cleaner,T52.9,X46.-,X66.-,Y16.-,
