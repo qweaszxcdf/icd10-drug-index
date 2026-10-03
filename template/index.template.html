@@ -511,51 +511,54 @@
         return output;
       }
 
+      const REFERENCE_MARKER_RE = /(?:see(?:\s+also)?|另见|参见|见)/i;
+
+      function referenceNames(name) {
+        const normalizedName = String(name ?? "").trim();
+        if (!normalizedName) return [];
+
+        const names = [normalizedName];
+        const shortName = normalizedName.match(/^(.+?)(?=\s*[（(])/u)?.[1]?.trim();
+        if (shortName && shortName !== normalizedName) names.push(shortName);
+
+        for (const part of normalizedName.split(/[,，]/u)) {
+          const alternateName = part.trim();
+          if (alternateName && alternateName !== normalizedName) {
+            names.push(alternateName);
+          }
+        }
+
+        const compactName = normalizedName.replace(/[（）()]/gu, "");
+        if (compactName && compactName !== normalizedName) names.push(compactName);
+
+        return [...new Set(names)];
+      }
+
+      const REFERENCE_CANDIDATES = DATA
+        .flatMap((row, position) =>
+          [row.name_zh, row.name_en]
+            .flatMap((name) => referenceNames(name))
+            .map((name) => ({
+              position,
+              name,
+              lowerName: name.toLocaleLowerCase(),
+            })),
+        )
+        .sort((left, right) => right.name.length - left.name.length);
+
       function renderSeeLinks(value, terms, currentPosition) {
         const source = String(value ?? "");
         if (!source) return "";
+        if (!REFERENCE_MARKER_RE.test(source)) return highlight(source, terms);
 
-        function referenceNames(name) {
-          const normalizedName = String(name ?? "").trim();
-          if (!normalizedName) return [];
-
-          const names = [normalizedName];
-          const shortName = normalizedName.match(/^(.+?)(?=\s*[（(])/u)?.[1]?.trim();
-          if (shortName && shortName !== normalizedName) names.push(shortName);
-
-          for (const part of normalizedName.split(/[,，]/u)) {
-            const alternateName = part.trim();
-            if (alternateName && alternateName !== normalizedName) {
-              names.push(alternateName);
-            }
-          }
-
-          const compactName = normalizedName.replace(/[（）()]/gu, "");
-          if (compactName && compactName !== normalizedName) names.push(compactName);
-
-          return [...new Set(names)];
-        }
-
-        const candidates = DATA
-          .map((row, position) => ({
-            position,
-            names: [row.name_zh, row.name_en]
-              .flatMap((name) => referenceNames(name)),
-          }))
-          .filter(({ position }) => position !== currentPosition)
-          .flatMap(({ position, names }) =>
-            names.map((name) => ({ position, name })),
-          )
-          .sort((left, right) => right.name.length - left.name.length);
-
+        const sourceLower = source.toLocaleLowerCase();
         const matches = [];
-        for (const candidate of candidates) {
+        for (const candidate of REFERENCE_CANDIDATES) {
+          if (candidate.position === currentPosition) continue;
+
           let fromIndex = 0;
           while (fromIndex < source.length) {
-            const index = source.toLocaleLowerCase().indexOf(
-              candidate.name.toLocaleLowerCase(),
-              fromIndex,
-            );
+            const index = sourceLower.indexOf(candidate.lowerName, fromIndex);
             if (index < 0) break;
 
             const prefix = source.slice(Math.max(0, index - 50), index);
@@ -924,7 +927,13 @@
 
       searchButton.addEventListener("click", submitSearch);
       queryInput.addEventListener("keydown", (event) => {
-        if (event.key !== "Enter") return;
+        if (
+          event.key !== "Enter" ||
+          event.isComposing ||
+          event.keyCode === 229
+        ) {
+          return;
+        }
         event.preventDefault();
         submitSearch();
       });
