@@ -542,9 +542,15 @@
               position,
               name,
               lowerName: name.toLocaleLowerCase(),
+              level: Number(row.level) || 0,
             })),
         )
-        .sort((left, right) => right.name.length - left.name.length);
+        .sort(
+          (left, right) =>
+            right.name.length - left.name.length ||
+            left.level - right.level ||
+            left.position - right.position,
+        );
 
       function renderSeeLinks(value, terms, currentPosition) {
         const source = String(value ?? "");
