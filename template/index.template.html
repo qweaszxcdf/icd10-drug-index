@@ -241,6 +241,21 @@
       overflow-wrap: anywhere;
     }
 
+    .code-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .code-link:hover {
+      text-decoration: underline;
+    }
+
+    .code-link:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
     .children {
       margin-top: 14px;
       padding-top: 12px;
@@ -263,17 +278,25 @@
       justify-content: space-between;
       gap: 12px;
       width: 100%;
-      border: 0;
-      padding: 9px 10px;
       border-radius: 10px;
       background: var(--subtle);
       color: var(--text);
-      text-align: left;
-      cursor: pointer;
+      overflow: hidden;
     }
 
     .child:hover {
       outline: 1px solid var(--border);
+    }
+
+    .child-main {
+      min-width: 0;
+      flex: 1 1 auto;
+      border: 0;
+      padding: 9px 10px;
+      background: transparent;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
     }
 
     .child-name {
@@ -292,6 +315,9 @@
 
     .child-code {
       flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 9px 10px;
       color: var(--chip-text);
       font-family:
         ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -644,12 +670,28 @@
         return { visible, total };
       }
 
+      function codeUrl(code) {
+        const targetCode = String(code ?? "")
+          .trim()
+          .replace(/\.\-$/, "");
+
+        return `https://icd10.pages.dev/?code=${encodeURIComponent(targetCode)}`;
+      }
+
+      function renderCodeLink(value, terms = [], className = "") {
+        if (!value) return "—";
+
+        const classes = ["code-link", className].filter(Boolean).join(" ");
+
+        return `<a class="${classes}" href="${codeUrl(value)}" target="_blank" rel="noopener noreferrer" title="在 ICD-10 类目表中打开 ${escapeHtml(value)}">${highlight(value, terms)}</a>`;
+      }
+
       function renderCodeCell(label, value, terms) {
         return `
           <div class="code-cell">
             <span class="code-label">${label}</span>
             <span class="code-value">
-              ${value ? highlight(value, terms) : "—"}
+              ${renderCodeLink(value, terms)}
             </span>
           </div>
         `;
@@ -711,24 +753,26 @@
                     child.poisoning_chapter19 || child.codes || "";
 
                   return `
-                    <button
-                      class="child"
-                      type="button"
-                      data-focus-position="${childPosition}"
-                    >
-                      <span class="child-name">
-                        <span class="child-zh">
-                          ${escapeHtml(child.name_zh || "（无中文名）")}
+                    <div class="child">
+                      <button
+                        class="child-main"
+                        type="button"
+                        data-focus-position="${childPosition}"
+                      >
+                        <span class="child-name">
+                          <span class="child-zh">
+                            ${escapeHtml(child.name_zh || "（无中文名）")}
+                          </span>
+                          <span class="child-en">
+                            ${escapeHtml(child.name_en || "")}
+                          </span>
                         </span>
-                        <span class="child-en">
-                          ${escapeHtml(child.name_en || "")}
-                        </span>
-                      </span>
+                      </button>
 
-                      <span class="child-code">
-                        ${escapeHtml(mainCode)}
-                      </span>
-                    </button>
+                      ${mainCode
+                        ? renderCodeLink(mainCode, [], "child-code")
+                        : '<span class="child-code">—</span>'}
+                    </div>
                   `;
                 })
                 .join("")}
